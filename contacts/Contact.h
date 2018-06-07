@@ -11,7 +11,10 @@
 
 #include "Person.h"
 
-class Contact : public Person
+vector<string> category_type;
+vector<Person*> contact_item;
+
+class Contact
 {
 private:
 	Person* anything_view(vector<int>&);
@@ -31,7 +34,8 @@ public:
 	Person* categoryView(const string);
 	Person* allView();
 	bool check_exact(Person&, string);		//check if index.name == info_str
-
+	
+	
 };
 
 #endif // !defined(AFX_Contact_H__578FBE4B_85A0_4A32_B651_7CF4D553E488__INCLUDED_)

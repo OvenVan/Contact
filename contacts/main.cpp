@@ -270,7 +270,7 @@ int view(Person& v_Person){
 		my_contact->modify_prsn(v_Person);
 		break;
 	case '3':
-		return 0;
+		break;
 	}
 	return 0;
 }
