@@ -3,13 +3,12 @@
 //	stdafx.obj will contain the pre-compiled type information
 
 #include "stdafx.h"
-#include "cls_contact.h"
-#include "person.h"
-
-vector<string> category_type;
-vector<person> contact_item;
+#include "Contact.h"
+#include "Person.h"
 
 string errorMsg;
+vector<string> category_type;
+vector<Person*> contact_item;
 
 /*
 
