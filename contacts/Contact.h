@@ -11,31 +11,25 @@
 
 #include "Person.h"
 
-vector<string> category_type;
-vector<Person*> contact_item;
-
 class Contact
 {
 private:
-	Person* anything_view(vector<int>&);
-
+	Person* anything_view(vector<int>&) const;
+	bool check_exact(const Person&, const string) const;		//check if index.name == info_str
 public:
 	Contact();
 	virtual ~Contact();
 
-	bool create();
-	int refresh();
-	bool delete_prsn(Person&);
-	void print_prsn(const Person&, const string, bool);
-	void printAll();
-	int modify_prsn(Person& m_Person);
-	Person* exactView(const string);
-	Person* fuzzyView(const string);
-	Person* categoryView(const string);
-	Person* allView();
-	bool check_exact(Person&, string);		//check if index.name == info_str
-	
-	
+	bool create() const;
+	int refresh() const;
+	bool delete_prsn(Person&) const;
+	void print_prsn(const Person&, const string, bool) const;
+	void printAll() const;
+	int modify_prsn(Person&) const;
+	Person* exactView(const string) const;
+	Person* fuzzyView(const string) const;
+	Person* categoryView(const string) const;
+	Person* allView() const;	
 };
 
 #endif // !defined(AFX_Contact_H__578FBE4B_85A0_4A32_B651_7CF4D553E488__INCLUDED_)

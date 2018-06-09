@@ -4,8 +4,8 @@
 #include "stdafx.h"
 #include "Contact.h"
 
-//extern vector<Person*> contact_item;
-//extern string errorMsg;
+extern vector<Person*> contact_item;
+extern string errorMsg;
 
 
 
@@ -19,26 +19,22 @@ Contact::~Contact()
 
 }
 
-bool Contact::create(){
+bool Contact::create() const{
 	Person t_info;
 	string t_str = "";
-	//struct temp_contact_info ;
 	cout<<"You can use ',[en]'(NOT '£¬[chs]') to enter more than one data(Only for *Tel and *QQ)"<<endl<<endl;
 	cout<<"Name:";
 	cin.clear();
 	cin.sync();
 	cin>>t_info.name;
-	//t_info.name[99] = '\0';
 	cout<<"Address:";
 	cin.clear();
 	cin.sync();
-	//t_info.name[99] = '\0';
 	cin>>t_info.addr;
 	cout<<"*Tel:";
 	cin.clear();
 	cin.sync();
 	cin>>t_info.tel;
-	//strcpy(t_info.tel, resetStrwithcomma(t_info.tel));
 
 	char t_c;
 	cout<<"\n\tthe following data can be set as NULL.Press ENTER to skip\n\n";
@@ -77,7 +73,6 @@ bool Contact::create(){
 		t_str += t_c;
 	}
 	strcpy(t_info.qq, t_str.c_str());
-	//strcpy(t_info.qq, resetStrwithcomma(t_str.c_str()));
 	cin.clear();
 	cin.sync();
 	t_str = "";
@@ -112,7 +107,7 @@ bool Contact::create(){
 	return true;
 }
 
-int Contact::refresh(){
+int Contact::refresh() const{
 
 	string info_check;
 	contact_item.clear();
@@ -155,7 +150,7 @@ int Contact::refresh(){
 }
 
 
-bool Contact::delete_prsn(Person& del_Person){
+bool Contact::delete_prsn(Person& del_Person) const{
 	char y_n;
 	string addr = ".\\contact\\";
 	cout<<"\n\n\t\tReally want to delete?[y/n]: ";
@@ -179,7 +174,7 @@ bool Contact::delete_prsn(Person& del_Person){
 	return false;
 }
 
-void Contact::print_prsn(const Person& prt_Person, const string info, bool refresh){
+void Contact::print_prsn(const Person& prt_Person, const string info, bool refresh) const{
 	system("cls");
 	cout<<endl<<info;
 	if(refresh) Sleep(20);
@@ -202,7 +197,7 @@ void Contact::print_prsn(const Person& prt_Person, const string info, bool refre
 }
 
 
-int Contact::modify_prsn(Person& m_Person){
+int Contact::modify_prsn(Person& m_Person) const{
 	char t_c;
 	char y_n;
 	//int index = 0;
@@ -322,7 +317,7 @@ int Contact::modify_prsn(Person& m_Person){
 	return 0;
 }
 
-bool Contact::check_exact(Person& index, string info_str){
+bool Contact::check_exact(const Person& index, const string info_str) const{
 	if (strcmp(index.name,info_str.c_str()) == 0)
 		return true;
 	vector<string> temp_vec = index.part_tq("tel");
@@ -333,7 +328,7 @@ bool Contact::check_exact(Person& index, string info_str){
 	return false;
 }
 
-Person* Contact::exactView(const string info_str){
+Person* Contact::exactView(const string info_str) const{
 	int num = contact_item.size();
 	int index = 0;
 	vector<int> chosen_item;
@@ -348,7 +343,7 @@ Person* Contact::exactView(const string info_str){
 	return anything_view(chosen_item);
 }
 
-Person* Contact::fuzzyView(const string info_str){
+Person* Contact::fuzzyView(const string info_str) const{
 	int num = contact_item.size();
 	int index = 0;
 	vector<int> chosen_item;
@@ -362,7 +357,7 @@ Person* Contact::fuzzyView(const string info_str){
 	}
 	return anything_view(chosen_item);
 }
-Person* Contact::categoryView(const string info_str){
+Person* Contact::categoryView(const string info_str) const{
 	int num = contact_item.size();
 	int index = 0;
 	vector<int> chosen_item;
@@ -377,7 +372,7 @@ Person* Contact::categoryView(const string info_str){
 	return anything_view(chosen_item);
 }
 
-Person* Contact::allView(){
+Person* Contact::allView() const{
 	int num = contact_item.size();
 	int index = 0;
 	vector<int> chosen_item;
@@ -390,7 +385,7 @@ Person* Contact::allView(){
 	return anything_view(chosen_item);
 }
 
-Person* Contact::anything_view(vector<int>& chosen_item){
+Person* Contact::anything_view(vector<int>& chosen_item) const{
 	//int num = contact_item.size();
 	int index = 0;
 
@@ -420,7 +415,7 @@ Person* Contact::anything_view(vector<int>& chosen_item){
 }
 
 
-void Contact::printAll(){
+void Contact::printAll() const{
 	int num = contact_item.size();
 	for (int i = 0; i < num; i++){
 		cout<<"("<<i+1<<"): "<<&*contact_item[i]->name<<"    TEL: "<<&*contact_item[i]->tel<<"    ADDR: "<<&*contact_item[i]->addr<<endl;

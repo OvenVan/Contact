@@ -22,8 +22,7 @@ Person::~Person()
 
 }
 
-bool Person::check(const bool _check_repe){	
-	
+bool Person::check(const bool _check_repe) {	
 	int i = 0, j = 0;
 	string re_write = "";
 	if (!((strlen(name)>0) && (strlen(tel)>0) && (strlen(addr)>0)) ){
@@ -100,7 +99,7 @@ bool Person::check(const bool _check_repe){
 	return true;
 }
 
-vector<string> Person::part_tq(const char* const TEL_QQ){
+vector<string> Person::part_tq(const char* const TEL_QQ) const {
 	vector<string> rtn_vec;
 	string src_str;
 	string temp_str = "";
@@ -111,8 +110,6 @@ vector<string> Person::part_tq(const char* const TEL_QQ){
 	else
 		return rtn_vec;
 
-
-	//int flag1 = -1, flag2 = 0;
 	for (int i = 0; i<strlen(src_str.c_str()); i++){
 		if (src_str[i] == ','){
 			rtn_vec.push_back(temp_str);

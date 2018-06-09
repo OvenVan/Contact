@@ -1,13 +1,11 @@
 
 #include "stdafx.h"
-#include "person.h"
-//#include "cls_contact.h"
+#include "Person.h"
 
+extern string errorMsg;
+extern vector<Person*> contact_item;
 
-
-//extern std::string errorMsg;			//stdafx.cpp
-
-person::person()
+Person::Person()
 {
 	strcpy(this->addr,"");
 	strcpy(this->category,"");
@@ -19,13 +17,12 @@ person::person()
 	strcpy(this->zip, "");
 }
 
-person::~person()
+Person::~Person()
 {
 
 }
 
-bool person::check(bool _check_repe){	
-	
+bool Person::check(const bool _check_repe) {	
 	int i = 0, j = 0;
 	string re_write = "";
 	if (!((strlen(name)>0) && (strlen(tel)>0) && (strlen(addr)>0)) ){
@@ -35,7 +32,8 @@ bool person::check(bool _check_repe){
 
 	if (_check_repe){				//here to use _check_repe only once.
 		for (i = 0; i < contact_item.size(); i++)
-			if (strcmp(name,contact_item[i].name) == 0){
+			if (strcmp(name,&*contact_item[i]->name) == 0){
+				sizeof(*contact_item[i]);
 				errorMsg = "Item already exists.";
 				return false;
 			}
@@ -101,7 +99,7 @@ bool person::check(bool _check_repe){
 	return true;
 }
 
-vector<string> person::part_tq(const char* TEL_QQ){
+vector<string> Person::part_tq(const char* const TEL_QQ) const {
 	vector<string> rtn_vec;
 	string src_str;
 	string temp_str = "";
@@ -112,8 +110,6 @@ vector<string> person::part_tq(const char* TEL_QQ){
 	else
 		return rtn_vec;
 
-
-	//int flag1 = -1, flag2 = 0;
 	for (int i = 0; i<strlen(src_str.c_str()); i++){
 		if (src_str[i] == ','){
 			rtn_vec.push_back(temp_str);

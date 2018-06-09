@@ -1,6 +1,3 @@
-// contacts.cpp : Defines the entry point for the console application.
-//
-
 #include "stdafx.h"
 #include "Contact.h"
 
@@ -8,73 +5,39 @@ int main_menu();
 int new_menu();
 int del_menu();
 int mdf_menu();
+int ext_menu();
 int view(Person& v_Person);
 int vew_menu();
 int cgy_vew();
 int all_vew();
 int cmp_names(char*, char*);
 int exfz_vew(const char*, const char*, const char*);
+int welcome();
 
 extern vector<Person*> contact_item;
-
-
 static Contact* my_contact = NULL;
 
 
 int main(int argc, char* argv[])
 {
 	int rtn_num = 0;
-	int n = 0;		//number of imported contact(s)
 	Contact default_contact;
+	map<int,int(*)()> rtn_map;
+
+	rtn_map[1] = new_menu;
+	rtn_map[2] = del_menu;
+	rtn_map[3] = mdf_menu;
+	rtn_map[4] = vew_menu;
+	rtn_map[5] = ext_menu;
 
 	my_contact = &default_contact;
 	setlocale(LC_ALL,"chs");
-	cout<<"\n\n\n----------Welcome to the Address Book System.--------\n\n";
-	cout<<"-----now LOADING address book...";
-	
-	n = my_contact->refresh();
 
-	Sleep(800);
-	if (n > 0){
-		cout<<"\t"<<n<<" contact(s) have been imported.\n";
-	}
-	else if (n == -1){
-		cout<<"\tFolder contact does not exist!.Please retry later!\n";
-		getch();
-		exit(0);
-	}
-	else{
-		cout<<"\t"<<"no contact has been imported.\n";
-	}
-	
-	Sleep(50);
-	cout<<"  Login...";
-	Sleep(300);
-	cout<<" Successful!";
-	Sleep(40);
+	welcome();
+
 	while(1){
-		int i;
-		if((i = rand()%10)>3)
-			my_contact->refresh();
-		switch(main_menu()){
-		case 1:
-			rtn_num = new_menu();
-			break;
-		case 2:
-			rtn_num = del_menu();
-			break;
-		case 3:
-			rtn_num = mdf_menu();
-			break;
-		case 4:
-			rtn_num = vew_menu();
-			break;
-		case 5:
-			exit(0);
-		}
-	
+		(*rtn_map[main_menu()])();
 	}
-	//
 	return 0;
 }
 
@@ -368,4 +331,35 @@ int cmp_names(char* c1, char* c2){
 	string s2 = c2;
 	if (s1 > s2) return 1;
 	else return -1;
+}
+
+int welcome(){
+	int n = 0;
+	cout<<"\n\n\n----------Welcome to the Address Book System.--------\n\n";
+	cout<<"-----now LOADING address book...";
+	n = my_contact->refresh();
+	Sleep(800);
+	if (n > 0){
+		cout<<"\t"<<n<<" contact(s) have been imported.\n";
+	}
+	else if (n == -1){
+		cout<<"\tFolder contact does not exist!.Please retry later!\n";
+		getch();
+		exit(0);
+	}
+	else{
+		cout<<"\t"<<"no contact has been imported.\n";
+	}
+	
+	Sleep(50);
+	cout<<"  Login...";
+	Sleep(300);
+	cout<<" Successful!";
+	Sleep(40);
+	return 0;
+}
+
+int ext_menu(){
+	exit(0);
+	return 0;
 }

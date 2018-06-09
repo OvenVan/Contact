@@ -29,12 +29,12 @@ public:
 	char mail[MAXMAIL];
 	char qq[MAXQQ];
 	char category[MAXCTGY];
-	
+
 	Person();
 	virtual ~Person();
 	
 	bool check(const bool _check_repe);
-	vector<string> part_tq(const char* const);
+	vector<string> part_tq(const char* const) const ;
 
 };
 
