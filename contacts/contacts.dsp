@@ -89,6 +89,10 @@ SOURCE=.\Contact.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\ContactInterface.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\main.cpp
 # End Source File
 # Begin Source File
@@ -107,6 +111,10 @@ SOURCE=.\StdAfx.cpp
 # Begin Source File
 
 SOURCE=.\Contact.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ContactInterface.h
 # End Source File
 # Begin Source File
 

@@ -11,12 +11,15 @@ extern string errorMsg;
 
 Contact::Contact()
 {
-
+	refresh();
 }
 
 Contact::~Contact()
 {
-
+	int freei = contact_item.size();
+	for (int i = 0; i<freei; ++i){
+		delete(contact_item.at(i));
+	}
 }
 
 bool Contact::create() const{
@@ -86,7 +89,7 @@ bool Contact::create() const{
 	cin.sync();
 	t_str = "";
 
-	if(!t_info.check(true)){
+	if(!check(t_info, true)  ){
 		cout<<"\n\t\t"<<errorMsg<<endl;
 		return false;
 	}
@@ -100,8 +103,7 @@ bool Contact::create() const{
 	if(fwrite(&t_info, sizeof(t_info), 1, fp) != 1)
 		printf("err");
 	fclose(fp);
-	
-	//readfile(t_addr);
+
 	refresh();
 	
 	return true;
@@ -145,10 +147,8 @@ int Contact::refresh() const{
 	else{  
 		if (!CreateDirectory(dir, NULL)) return -1;
 	}
-
 	return contact_item.size();
 }
-
 
 bool Contact::delete_prsn(Person& del_Person) const{
 	char y_n;
@@ -289,7 +289,7 @@ int Contact::modify_prsn(Person& m_Person) const{
 	cin.sync();
 	y_n = getch();
 	if ((y_n == 'y') || (y_n == 'Y')){
-		if(!t_info.check(false)){
+		if(!check(t_info, false)  ){
 			cout<<"\n\t\tInfomation Error!";
 			return -1;
 		}
@@ -320,7 +320,7 @@ int Contact::modify_prsn(Person& m_Person) const{
 bool Contact::check_exact(const Person& index, const string info_str) const{
 	if (strcmp(index.name,info_str.c_str()) == 0)
 		return true;
-	vector<string> temp_vec = index.part_tq("tel");
+	vector<string> temp_vec = part_tq(index, "tel");
 	for (int i = 0; i<temp_vec.size(); i++){
 		if (strcmp(temp_vec.at(i).c_str(),info_str.c_str()) == 0)
 			return true;
@@ -386,7 +386,6 @@ Person* Contact::allView() const{
 }
 
 Person* Contact::anything_view(vector<int>& chosen_item) const{
-	//int num = contact_item.size();
 	int index = 0;
 
 	if (chosen_item.size() == 0){
@@ -414,11 +413,89 @@ Person* Contact::anything_view(vector<int>& chosen_item) const{
 	}//if (chosen_item.size() == 0)
 }
 
-
 void Contact::printAll() const{
 	int num = contact_item.size();
 	for (int i = 0; i < num; i++){
 		cout<<"("<<i+1<<"): "<<&*contact_item[i]->name<<"    TEL: "<<&*contact_item[i]->tel<<"    ADDR: "<<&*contact_item[i]->addr<<endl;
 		Sleep(20);
 	}
+}
+
+int Contact::exfz_vew(const char* title, const char* descp, const char* flag) const{
+	string info_str;
+	Person* viewPerson = NULL;
+
+	system("cls");
+	cout<<endl;
+	cout<<title<<endl<<endl;
+	cout<<descp;
+	cin.clear();
+	cin.sync();
+	cin>>info_str;
+	if (info_str == ""){
+		cout<<"\n\n\t\tNo Infomation Found!\n";
+	}
+	else{	
+		if (flag == "exact")
+			viewPerson = exactView(info_str);
+		else
+			viewPerson = fuzzyView(info_str);
+		if (viewPerson != NULL){
+			view(*viewPerson);
+		}
+	}
+	return 0;
+}
+
+int Contact::cgy_vew() const{
+	string info_str;
+	vector<string> cur_ctg;
+	string tmp_ctg;
+	bool add_ctg;
+	int index = 0;
+	int i = 0,j = 0;
+	system("cls");
+	cout<<endl;
+	cout<<"=====List by Category==================\n\n";
+	cout<<"\tCurrent category:";
+	for (i = 0; i<contact_item.size();i++){
+		tmp_ctg = &*contact_item[i]->category;
+		if (tmp_ctg == "")
+			tmp_ctg = "Unset";
+		add_ctg = true;
+		for (j = 0; j<cur_ctg.size();j++){
+			if (cur_ctg[j] == tmp_ctg)
+				add_ctg = false;
+		}
+		if (add_ctg){
+			cur_ctg.push_back(tmp_ctg);
+			cout<<"  "<<tmp_ctg;
+		}
+	}
+
+	cout<<"\n\n\tEnter category infomation:";
+	cin.clear();
+	cin.sync();
+	cin>>info_str;
+	if ((info_str == "Unset") || (info_str == "unset"))
+		info_str = "";
+	
+	Person* viewPerson =categoryView(info_str);
+	if (viewPerson != NULL){
+		view(*viewPerson);
+	}
+	return 0;
+
+}
+int Contact::all_vew() const{
+	int i = 0,j = 0;	
+	Person temp_p;
+	system("cls");
+	cout<<endl;
+	cout<<"=====ALL Category======================\n\n";
+	Person* viewPerson = allView();
+	if (viewPerson != NULL){
+		view(*viewPerson);
+	}
+	return 0;
 }

@@ -21,6 +21,7 @@
 class Person  
 {
 public:
+	//why procted does not work.
 	char name[MAXNAME];
 	char sex;
 	char tel[MAXTEL];
@@ -29,13 +30,7 @@ public:
 	char mail[MAXMAIL];
 	char qq[MAXQQ];
 	char category[MAXCTGY];
-
 	Person();
-	virtual ~Person();
-	
-	bool check(const bool _check_repe);
-	vector<string> part_tq(const char* const) const ;
-
 };
 
 
