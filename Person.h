@@ -21,7 +21,7 @@
 class Person  
 {
 public:
-	//why procted does not work.
+	//why procted does not work?
 	char name[MAXNAME];
 	char sex;
 	char tel[MAXTEL];
@@ -30,7 +30,9 @@ public:
 	char mail[MAXMAIL];
 	char qq[MAXQQ];
 	char category[MAXCTGY];
+
 	Person();
+	~Person();
 };
 
 

@@ -14,3 +14,6 @@ Person::Person()
 	strcpy(this->zip, "");
 }
 
+Person::~Person()
+{
+}

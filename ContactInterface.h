@@ -7,7 +7,7 @@
 
 #include "Person.h"
 
-class ContactInterface : public Person
+class ContactInterface
 {
 public:
 	virtual int new_menu();
@@ -16,6 +16,7 @@ public:
 	virtual int vew_menu();
 	virtual int refresh() const = 0;	
 
+	virtual ~ContactInterface(){};
 
 
 protected:

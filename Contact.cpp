@@ -1,13 +1,9 @@
-// Contact.cpp: implementation of the Contact class.
-//
-//////////////////////////////////////////////////////////////////////
+
 #include "stdafx.h"
 #include "Contact.h"
 
 extern vector<Person*> contact_item;
 extern string errorMsg;
-
-
 
 Contact::Contact()
 {

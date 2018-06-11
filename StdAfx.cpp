@@ -7,5 +7,4 @@
 #include "Person.h"
 
 string errorMsg;
-vector<string> category_type;
 vector<Person*> contact_item;
