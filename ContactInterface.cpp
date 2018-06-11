@@ -3,7 +3,6 @@
 #include "stdafx.h"
 #include "ContactInterface.h"
 
-
 extern vector<Person*> contact_item;
 extern string errorMsg;
 
