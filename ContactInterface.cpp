@@ -282,3 +282,85 @@ vector<string> ContactInterface::part_tq(const Person& person, const char* const
 	rtn_vec.push_back(temp_str);
 	return rtn_vec;
 }
+
+int ContactInterface::exfz_vew(const char* title, const char* descp, const char* flag) const{
+	string info_str;
+	Person* viewPerson = NULL;
+
+	system("cls");
+	cout<<endl;
+	cout<<title<<endl<<endl;
+	cout<<descp;
+	cin.clear();
+	cin.sync();
+	cin>>info_str;
+	if (info_str == ""){
+		cout<<"\n\n\t\tNo Infomation Found!\n";
+	}
+	else{	
+		if (flag == "exact")
+			viewPerson = exactView(info_str);
+		else
+			viewPerson = fuzzyView(info_str);
+		if (viewPerson != NULL){
+			view(*viewPerson);
+		}
+	}
+	return 0;
+}
+
+int ContactInterface::cgy_vew() const{
+	string info_str;
+	vector<string> cur_ctg;
+	string tmp_ctg;
+	bool add_ctg;
+	int index = 0;
+	int i = 0,j = 0;
+	Person* viewPerson = NULL;
+
+	system("cls");
+	cout<<endl;
+	cout<<"=====List by Category==================\n\n";
+	cout<<"\tCurrent category:";
+	for (i = 0; i<contact_item.size();i++){
+		tmp_ctg = &*contact_item[i]->category;
+		if (tmp_ctg == "")
+			tmp_ctg = "Unset";
+		add_ctg = true;
+		for (j = 0; j<cur_ctg.size();j++){
+			if (cur_ctg[j] == tmp_ctg)
+				add_ctg = false;
+		}
+		if (add_ctg){
+			cur_ctg.push_back(tmp_ctg);
+			cout<<"  "<<tmp_ctg;
+		}
+	}
+
+	cout<<"\n\n\tEnter category infomation:";
+	cin.clear();
+	cin.sync();
+	cin>>info_str;
+	if ((info_str == "Unset") || (info_str == "unset"))
+		info_str = "";
+	
+	viewPerson =categoryView(info_str);
+	if (viewPerson != NULL){
+		view(*viewPerson);
+	}
+	return 0;
+
+}
+int ContactInterface::all_vew() const{
+	int i = 0,j = 0;	
+	Person* viewPerson = NULL;
+
+	system("cls");
+	cout<<endl;
+	cout<<"=====ALL Category======================\n\n";
+	viewPerson = allView();			//all_vew called allView;
+	if (viewPerson != NULL){
+		view(*viewPerson);
+	}
+	return 0;
+}

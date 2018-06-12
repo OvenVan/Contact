@@ -114,6 +114,10 @@ SOURCE=.\Contact.h
 # End Source File
 # Begin Source File
 
+SOURCE=.\ContactInit.h
+# End Source File
+# Begin Source File
+
 SOURCE=.\ContactInterface.h
 # End Source File
 # Begin Source File

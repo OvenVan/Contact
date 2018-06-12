@@ -196,7 +196,6 @@ void Contact::print_prsn(const Person& prt_Person, const string info, bool refre
 int Contact::modify_prsn(Person& m_Person) const{
 	char t_c;
 	char y_n;
-	//int index = 0;
 	string addr = ".\\contact\\";
 	string t_str = "";
 	addr += m_Person.name;
@@ -336,7 +335,7 @@ Person* Contact::exactView(const string info_str) const{
 			Sleep(20);
 		}
 	}
-	return anything_view(chosen_item);
+	return anythingView(chosen_item);
 }
 
 Person* Contact::fuzzyView(const string info_str) const{
@@ -351,7 +350,7 @@ Person* Contact::fuzzyView(const string info_str) const{
 			Sleep(20);
 		}
 	}
-	return anything_view(chosen_item);
+	return anythingView(chosen_item);
 }
 Person* Contact::categoryView(const string info_str) const{
 	int num = contact_item.size();
@@ -365,7 +364,7 @@ Person* Contact::categoryView(const string info_str) const{
 			Sleep(20);
 		}
 	}
-	return anything_view(chosen_item);
+	return anythingView(chosen_item);
 }
 
 Person* Contact::allView() const{
@@ -378,10 +377,10 @@ Person* Contact::allView() const{
 		cout<<"("<<chosen_item.size()<<"): "<<&*contact_item[i]->name<<"    TEL: "<<&*contact_item[i]->tel<<"    ADDR: "<<&*contact_item[i]->addr<<endl;
 		Sleep(20);
 	}
-	return anything_view(chosen_item);
+	return anythingView(chosen_item);
 }
 
-Person* Contact::anything_view(vector<int>& chosen_item) const{
+Person* Contact::anythingView(vector<int>& chosen_item) const{
 	int index = 0;
 
 	if (chosen_item.size() == 0){
@@ -418,84 +417,27 @@ void Contact::printAll() const{
 	}
 }
 
-int Contact::exfz_vew(const char* title, const char* descp, const char* flag) const{
-	string info_str;
-	Person* viewPerson = NULL;
-
-	system("cls");
-	cout<<endl;
-	cout<<title<<endl<<endl;
-	cout<<descp;
-	cin.clear();
-	cin.sync();
-	cin>>info_str;
-	if (info_str == ""){
-		cout<<"\n\n\t\tNo Infomation Found!\n";
+void Contact::welcome() const{
+	int n = 0;
+	cout<<"\n\n\n----------Welcome to the Address Book System.--------\n\n";
+	cout<<"-----now LOADING address book...";
+	n = refresh();
+	Sleep(800);
+	if (n > 0){
+		cout<<"\t"<<n<<" contact(s) have been imported.\n";
 	}
-	else{	
-		if (flag == "exact")
-			viewPerson = exactView(info_str);
-		else
-			viewPerson = fuzzyView(info_str);
-		if (viewPerson != NULL){
-			view(*viewPerson);
-		}
+	else if (n == -1){
+		cout<<"\tFolder contact does not exist!.Please retry later!\n";
+		getch();
+		exit(0);
 	}
-	return 0;
-}
-
-int Contact::cgy_vew() const{
-	string info_str;
-	vector<string> cur_ctg;
-	string tmp_ctg;
-	bool add_ctg;
-	int index = 0;
-	int i = 0,j = 0;
-	Person* viewPerson = NULL;
-
-	system("cls");
-	cout<<endl;
-	cout<<"=====List by Category==================\n\n";
-	cout<<"\tCurrent category:";
-	for (i = 0; i<contact_item.size();i++){
-		tmp_ctg = &*contact_item[i]->category;
-		if (tmp_ctg == "")
-			tmp_ctg = "Unset";
-		add_ctg = true;
-		for (j = 0; j<cur_ctg.size();j++){
-			if (cur_ctg[j] == tmp_ctg)
-				add_ctg = false;
-		}
-		if (add_ctg){
-			cur_ctg.push_back(tmp_ctg);
-			cout<<"  "<<tmp_ctg;
-		}
+	else{
+		cout<<"\t"<<"no contact has been imported.\n";
 	}
-
-	cout<<"\n\n\tEnter category infomation:";
-	cin.clear();
-	cin.sync();
-	cin>>info_str;
-	if ((info_str == "Unset") || (info_str == "unset"))
-		info_str = "";
 	
-	viewPerson =categoryView(info_str);
-	if (viewPerson != NULL){
-		view(*viewPerson);
-	}
-	return 0;
-
-}
-int Contact::all_vew() const{
-	int i = 0,j = 0;	
-	Person* viewPerson = NULL;
-
-	system("cls");
-	cout<<endl;
-	cout<<"=====ALL Category======================\n\n";
-	viewPerson = allView();
-	if (viewPerson != NULL){
-		view(*viewPerson);
-	}
-	return 0;
+	Sleep(50);
+	cout<<"  Login...";
+	Sleep(300);
+	cout<<" Successful!";
+	Sleep(40);
 }

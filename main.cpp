@@ -4,35 +4,38 @@
 #include "Contact.h"
 
 int main_menu();
-int welcome(ContactInterface*);
 
 extern vector<Person*> contact_item;
 
 int main(int argc, char* argv[])
 {
-	ContactInterface* my_contact = new Contact();
-	welcome(my_contact);
+	Contact* my_contact = new Contact();
 
+	ContactInterface* my_interface = my_contact;
+	ContactInit* my_init = my_contact;
+	my_init->welcome();
 
 	while(1){
+		my_init->refresh();
 		switch (main_menu()){
 		case 1:
-			my_contact->new_menu();
+			my_interface->new_menu();
 			break;
 		case 2:
-			my_contact->del_menu();
+			my_interface->del_menu();
 			break;
 		case 3:
-			my_contact->mdf_menu();
+			my_interface->mdf_menu();
 			break;
 		case 4:
-			my_contact->vew_menu();
+			my_interface->vew_menu();
 			break;
 		case 5:
 			exit(0);
 			break;
 		}
 	}
+	delete my_contact;
 	return 0;
 }
 
@@ -63,28 +66,3 @@ int main_menu(){
 	return (rtn_int - '0');
 }
 
-int welcome(ContactInterface* my_contact){
-	int n = 0;
-	cout<<"\n\n\n----------Welcome to the Address Book System.--------\n\n";
-	cout<<"-----now LOADING address book...";
-	n = my_contact->refresh();
-	Sleep(800);
-	if (n > 0){
-		cout<<"\t"<<n<<" contact(s) have been imported.\n";
-	}
-	else if (n == -1){
-		cout<<"\tFolder contact does not exist!.Please retry later!\n";
-		getch();
-		exit(0);
-	}
-	else{
-		cout<<"\t"<<"no contact has been imported.\n";
-	}
-	
-	Sleep(50);
-	cout<<"  Login...";
-	Sleep(300);
-	cout<<" Successful!";
-	Sleep(40);
-	return 0;
-}
