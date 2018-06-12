@@ -10,6 +10,7 @@
 class ContactInterface
 {
 public:
+	virtual int main_menu();
 	virtual int new_menu();
 	virtual int del_menu();
 	virtual int mdf_menu();
@@ -17,8 +18,11 @@ public:
 
 	virtual ~ContactInterface(){};
 
-
 protected:
+	virtual int exfz_vew(const char*, const char*, const char*) const;		//Menu of Exact/Fuzzy view
+	virtual int cgy_vew() const;											//Menu of Category view
+	virtual int all_vew() const;											//Menu of All view
+
 	virtual bool create() const = 0;										//Way to create a Person member
 	virtual bool delete_prsn(Person&) const = 0;							//Way to delete a spefic Person member
 	virtual void printAll() const = 0;										//Way to print all Person member
@@ -30,9 +34,7 @@ protected:
 	virtual Person* categoryView(const string) const = 0;
 	virtual Person* allView() const = 0;
 
-	virtual int cgy_vew() const;											//Menu of Category view
-	virtual int all_vew() const;											//Menu of All view
-	virtual int exfz_vew(const char*, const char*, const char*) const;		//Menu of Exact/Fuzzy view
+
 
 	virtual int view(Person& v_Person) const;								//View a Person member with details
 

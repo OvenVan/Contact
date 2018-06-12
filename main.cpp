@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 
 	while(1){
 		my_init->refresh();
-		switch (main_menu()){
+		switch (my_interface->main_menu()){
 		case 1:
 			my_interface->new_menu();
 			break;
@@ -39,30 +39,5 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-int main_menu(){
-	char rtn_int;
-	int fuckin_stupid = 0;
-	cin.clear();
-	cin.sync();
-	do{
-		system("cls");
-		cout<<endl<<endl;
-		cout<<"\t\t==========MAIN MENU===========\n\t\t|\n";
-		cout<<"\t\t ---New____1------------------\n\t\t|\n";
-		cout<<"\t\t ---Delete_2------------------\n\t\t|\n";
-		cout<<"\t\t ---Modify_3------------------\n\t\t|\n";
-		cout<<"\t\t ---View___4------------------\n\t\t|\n";
-		cout<<"\t\t ---Quit___5------------------\n\n";
 
-		if (fuckin_stupid != 0)
-			cout<<"\t\tError Inputing!\n";
-		cout<<"\tEnter number[1-5] to select the corresponding function: ";
-		
-		cin.clear();
-		cin.sync();
-		rtn_int = getch();
-		fuckin_stupid++;
-	}while((rtn_int<'1') || (rtn_int>'5'));
-	return (rtn_int - '0');
-}
 
