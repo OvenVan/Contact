@@ -1,0 +1,25 @@
+// ViewAllMenu.cpp: implementation of the ViewAllMenu class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "ViewAllMenu.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+ViewAllMenu::ViewAllMenu()
+{
+
+}
+
+ViewAllMenu::~ViewAllMenu()
+{
+
+}
+
+ViewStrategy* ViewAllMenuFactory::createStrategy(){
+	return (new ViewAllMenu);
+}
+

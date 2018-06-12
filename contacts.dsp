@@ -97,12 +97,56 @@ SOURCE=.\main.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\MainDelMenu.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\MainMdfMenu.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\MainNewMenu.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\MainStrategy.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\MainVewMenu.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\Person.cpp
 # End Source File
 # Begin Source File
 
 SOURCE=.\StdAfx.cpp
 # ADD CPP /Yc"stdafx.h"
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewAllMenu.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewCategoryMenu.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewExactMenu.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewFactory.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewFuzzyMenu.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewStrategy.cpp
 # End Source File
 # End Group
 # Begin Group "Header Files"
@@ -122,11 +166,55 @@ SOURCE=.\ContactInterface.h
 # End Source File
 # Begin Source File
 
+SOURCE=.\MainDelMenu.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\MainMdfMenu.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\MainNewMenu.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\MainStrategy.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\MainVewMenu.h
+# End Source File
+# Begin Source File
+
 SOURCE=.\person.h
 # End Source File
 # Begin Source File
 
 SOURCE=.\StdAfx.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewAllMenu.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewCategoryMenu.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewExactMenu.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewFactory.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewFuzzyMenu.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ViewStrategy.h
 # End Source File
 # End Group
 # End Target

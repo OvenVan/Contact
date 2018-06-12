@@ -6,22 +6,13 @@
 --------------------Configuration: contacts - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP17D4.tmp" with contents
+Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSPA298.tmp" with contents
 [
 /nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/contacts.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"F:\大学\c++Projects\Contacts\Contact.cpp"
-"F:\大学\c++Projects\Contacts\ContactInterface.cpp"
-"F:\大学\c++Projects\Contacts\main.cpp"
-"F:\大学\c++Projects\Contacts\Person.cpp"
+"F:\大学\c++Projects\Contacts\MainVewMenu.cpp"
 ]
-Creating command line "cl.exe @C:\Users\dell\AppData\Local\Temp\RSP17D4.tmp" 
-Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP17D5.tmp" with contents
-[
-/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/contacts.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"F:\大学\c++Projects\Contacts\StdAfx.cpp"
-]
-Creating command line "cl.exe @C:\Users\dell\AppData\Local\Temp\RSP17D5.tmp" 
-Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP17D6.tmp" with contents
+Creating command line "cl.exe @C:\Users\dell\AppData\Local\Temp\RSPA298.tmp" 
+Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSPA299.tmp" with contents
 [
 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/contacts.pdb" /debug /machine:I386 /out:"Debug/contacts.exe" /pdbtype:sept 
 ".\Debug\Contact.obj"
@@ -29,27 +20,154 @@ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32
 ".\Debug\main.obj"
 ".\Debug\Person.obj"
 ".\Debug\StdAfx.obj"
+".\Debug\MainStrategy.obj"
+".\Debug\MainNewMenu.obj"
+".\Debug\MainDelMenu.obj"
+".\Debug\MainMdfMenu.obj"
+".\Debug\MainVewMenu.obj"
+".\Debug\ViewStrategy.obj"
+".\Debug\ViewExactMenu.obj"
+".\Debug\ViewFuzzyMenu.obj"
+".\Debug\ViewCategoryMenu.obj"
+".\Debug\ViewAllMenu.obj"
+".\Debug\ViewFactory.obj"
 ]
-Creating command line "link.exe @C:\Users\dell\AppData\Local\Temp\RSP17D6.tmp"
+Creating command line "link.exe @C:\Users\dell\AppData\Local\Temp\RSPA299.tmp"
 <h3>Output Window</h3>
 Compiling...
-StdAfx.cpp
-Compiling...
-Contact.cpp
-ContactInterface.cpp
-main.cpp
-Generating Code...
-Skipping... (no relevant changes detected)
-Person.cpp
-Linking...
-Creating command line "bscmake.exe /nologo /o"Debug/contacts.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\Contact.sbr" ".\Debug\ContactInterface.sbr" ".\Debug\main.sbr" ".\Debug\Person.sbr""
+MainVewMenu.cpp
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(56) : error C2061: syntax error : identifier 'ViewExactMenu'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : error C2143: syntax error : missing ';' before '}'
+F:\大学\c++Projects\Contacts\MainVewMenu.cpp(71) : fatal error C1003: error count exceeds 100; stopping compilation
+Error executing cl.exe.
+Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSPA3D3.tmp" with contents
+[
+/nologo /o"Debug/contacts.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\Contact.sbr"
+".\Debug\ContactInterface.sbr"
+".\Debug\main.sbr"
+".\Debug\Person.sbr"
+".\Debug\MainStrategy.sbr"
+".\Debug\MainNewMenu.sbr"
+".\Debug\MainDelMenu.sbr"
+".\Debug\MainMdfMenu.sbr"
+".\Debug\MainVewMenu.sbr"
+".\Debug\ViewStrategy.sbr"
+".\Debug\ViewExactMenu.sbr"
+".\Debug\ViewFuzzyMenu.sbr"
+".\Debug\ViewCategoryMenu.sbr"
+".\Debug\ViewAllMenu.sbr"
+".\Debug\ViewFactory.sbr"]
+Creating command line "bscmake.exe @C:\Users\dell\AppData\Local\Temp\RSPA3D3.tmp"
 Creating browse info file...
+BSCMAKE: error BK1506 : cannot open file '.\Debug\MainVewMenu.sbr': No such file or directory
+Error executing bscmake.exe.
 <h3>Output Window</h3>
 
 
 
 <h3>Results</h3>
-contacts.exe - 0 error(s), 0 warning(s)
+contacts.exe - 103 error(s), 0 warning(s)
 </pre>
 </body>
 </html>

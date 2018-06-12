@@ -1,0 +1,24 @@
+// ViewExactMenu.cpp: implementation of the ViewExactMenu class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "ViewExactMenu.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+ViewExactMenu::ViewExactMenu()
+{
+
+}
+
+ViewExactMenu::~ViewExactMenu()
+{
+
+}
+
+ViewStrategy* ViewExactMenuFactory::createStrategy(){
+	return (new ViewExactMenu);
+}
