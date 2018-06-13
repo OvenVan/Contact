@@ -32,7 +32,7 @@ private:
 	ViewStrategy* viewStrategy;
 
 	ViewStrategy* setViewStrategy(int);
-	int view(Person& v_Person) const;								//View a Person member with details
+	int view(Person* v_Person) const;								//View a Person member with details
 
 
 

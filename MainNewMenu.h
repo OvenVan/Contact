@@ -19,7 +19,7 @@ public:
 	int doMainStrategy();
 
 protected:
-	bool create() const{return true;}
+	bool create() const;
 
 };
 

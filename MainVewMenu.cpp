@@ -67,8 +67,10 @@ int MainVewMenu::doMainStrategy()
 	}while((slct_num<'1') || (slct_num>'5'));
 
 	viewStrategy = setViewStrategy(slct_num);
-
-	view(*(viewStrategy->doViewStrategy()));
+	if (viewStrategy == NULL)
+		return -1;
+	
+	view(viewStrategy->doViewStrategy());
 	return 0;
 }
 
@@ -213,13 +215,17 @@ int MainVewMenu::modify_prsn(Person& m_Person) const{
 	return 0;
 }
 			
-int MainVewMenu::view(Person& v_Person) const{
+int MainVewMenu::view(Person* v_Person) const{
+
+	if (v_Person == NULL)
+		return -1;
+
 	bool refresh = true;
 	string addr = ".\\contact\\";
 	int fuckin_stupid = 0;
 	int slct_num = 0;
 	do{
-		print_prsn(v_Person,"=====VIEW Contact====================\n",refresh);
+		print_prsn(*v_Person,"=====VIEW Contact====================\n",refresh);
 		cout<<endl<<endl;	
 		cout<<" ====Options=======\n|\n";
 		if(refresh) Sleep(20);				
@@ -243,13 +249,13 @@ int MainVewMenu::view(Person& v_Person) const{
 			
 	switch (slct_num){
 	case '1':
-		delete_prsn(v_Person);
+		delete_prsn(*v_Person);
 		cin.clear();
 		cin.sync();
 		getch();
 		break;
 	case '2':
-		modify_prsn(v_Person);
+		modify_prsn(*v_Person);
 		cin.clear();
 		cin.sync();
 		getch();
