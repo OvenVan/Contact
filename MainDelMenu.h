@@ -9,9 +9,9 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-#include "MainVewMenu.h"
+#include "MainStrategy.h"
 
-class MainDelMenu : public MainVewMenu
+class MainDelMenu : public MainStrategy
 {
 public:
 	MainDelMenu();

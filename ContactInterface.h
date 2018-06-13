@@ -6,10 +6,6 @@
 #endif // _MSC_VER > 1000
 
 #include "MainStrategy.h"
-#include "MainNewMenu.h"
-#include "MainDelMenu.h"
-#include "MainMdfMenu.h"
-#include "MainVewMenu.h"
 
 class ContactInterface
 {

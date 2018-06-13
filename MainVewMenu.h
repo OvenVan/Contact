@@ -19,23 +19,16 @@
 
 class MainVewMenu : public MainStrategy
 {
-public:
-	MainVewMenu();
-	virtual ~MainVewMenu();
-	virtual int doMainStrategy();
-
-protected:
-	bool delete_prsn(Person&) const;
-	int modify_prsn(Person&) const;								//Way to modify a spefic Person member, with 0->success, -1->fail
-
 private:
 	ViewStrategy* viewStrategy;
 
 	ViewStrategy* setViewStrategy(int);
 	int view(Person* v_Person) const;								//View a Person member with details
 
-
-
+public:
+	MainVewMenu();
+	virtual ~MainVewMenu();
+	virtual int doMainStrategy();
 
 };
 

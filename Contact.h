@@ -13,6 +13,11 @@
 #include "ContactInterface.h"
 #include "ContactInit.h"
 
+#include "MainNewMenu.h"
+#include "MainDelMenu.h"
+#include "MainMdfMenu.h"
+#include "MainVewMenu.h"
+
 class Contact : public ContactInterface, public ContactInit
 {
 private:

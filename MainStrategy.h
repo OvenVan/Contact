@@ -19,10 +19,11 @@ public:
 	virtual int doMainStrategy() = 0;
 
 protected:
-	virtual void printAll() const;	
-	virtual void print_prsn(const Person&, const string, bool) const;
+	void printAll() const;	
+	void print_prsn(const Person&, const string, bool) const;
 
-
+	bool delete_prsn(Person&) const;
+	int modify_prsn(Person&) const;								//Way to modify a spefic Person member, with 0->success, -1->fail
 
 
 };
