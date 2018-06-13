@@ -6,27 +6,6 @@
 extern vector<Person*> contact_item;
 extern string errorMsg;
 
-MainStrategy* ContactInterface::setMainStrategy(int num){
-		switch (num){
-		case 1:
-			return new MainNewMenu();
-			break;
-		case 2:
-			return new MainDelMenu();
-			break;
-		case 3:
-			return new MainMdfMenu();
-			break;
-		case 4:
-			return new MainVewMenu();
-			break;
-		case 5:
-			return NULL;
-			break;
-		}
-		return NULL;
-}
-
 int ContactInterface::main_menu(){
 	char rtn_int;
 	int fuckin_stupid = 0;

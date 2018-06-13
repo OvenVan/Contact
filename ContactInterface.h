@@ -15,7 +15,7 @@ class ContactInterface
 {
 private:
 	MainStrategy* mainStrategy;
-	MainStrategy* setMainStrategy(int);
+	virtual MainStrategy* setMainStrategy(int) = 0;
 
 public:
 	virtual int main_menu();

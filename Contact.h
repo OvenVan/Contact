@@ -15,6 +15,8 @@
 
 class Contact : public ContactInterface, public ContactInit
 {
+private:
+	MainStrategy* setMainStrategy(int);
 public:
 	Contact();
 	~Contact();
