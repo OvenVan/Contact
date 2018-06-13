@@ -19,12 +19,9 @@ public:
 	virtual Person* doViewStrategy() = 0;
 
 protected:
-	
-	virtual const char* title_vew(const char*, const char*) const;		//for exact/fuzzy view
-	virtual void all_vew() const;
-	virtual const char* category_vew() const;
-
-
+	string title_vew(const char*, const char*) const;		//for exact/fuzzy view
+	void all_vew() const;
+	string category_vew() const;
 	Person* anythingView(vector<int>&) const;
 
 
