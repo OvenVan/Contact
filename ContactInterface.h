@@ -5,10 +5,19 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-#include "Person.h"
+#include "MainStrategy.h"
+#include "MainNewMenu.h"
+#include "MainDelMenu.h"
+#include "MainMdfMenu.h"
+#include "MainVewMenu.h"
 
 class ContactInterface
 {
+private:
+	MainStrategy* mainStrategy;
+
+	MainStrategy* setMainStrategy(int);
+
 public:
 	virtual int main_menu();
 	virtual int new_menu();

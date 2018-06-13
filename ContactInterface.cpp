@@ -6,6 +6,27 @@
 extern vector<Person*> contact_item;
 extern string errorMsg;
 
+MainStrategy* ContactInterface::setMainStrategy(int num){
+		switch (num){
+		case 1:
+			return new MainNewMenu();
+			break;
+		case 2:
+			return new MainDelMenu();
+			break;
+		case 3:
+			return new MainMdfMenu();
+			break;
+		case 4:
+			return new MainVewMenu();
+			break;
+		case 5:
+			return NULL;
+			break;
+		}
+		return NULL;
+}
+
 int ContactInterface::main_menu(){
 	char rtn_int;
 	int fuckin_stupid = 0;
@@ -30,7 +51,10 @@ int ContactInterface::main_menu(){
 		rtn_int = getch();
 		fuckin_stupid++;
 	}while((rtn_int<'1') || (rtn_int>'5'));
-	return (rtn_int - '0');
+
+	mainStrategy = setMainStrategy(rtn_int-'0');
+	mainStrategy->doMainStrategy();
+	return 0;
 }
 
 int ContactInterface::new_menu(){
