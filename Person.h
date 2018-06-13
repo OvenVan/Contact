@@ -18,6 +18,7 @@
 #define MAXCTGY	20
 
 
+
 class Person  
 {
 public:
@@ -35,6 +36,7 @@ public:
 	~Person();
 };
 
-
+extern vector<Person*> contact_item;
+extern string errorMsg;
 
 #endif // !defined(AFX_Person_H__4EDC1B44_F6DC_404A_ADA9_E56095080841__INCLUDED_)
