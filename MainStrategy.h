@@ -24,8 +24,6 @@ protected:
 
 	bool delete_prsn(Person&) const;
 	int modify_prsn(Person&) const;								//Way to modify a spefic Person member, with 0->success, -1->fail
-
-
 };
 
 //extern vector<Person*> contact_item;

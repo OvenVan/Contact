@@ -19,7 +19,7 @@ private:
 	ViewStrategy* viewStrategy;
 
 	virtual ViewStrategy* setViewStrategy(int) = 0;
-	int view(Person* v_Person) const;								//View a Person member with details
+	virtual int view(Person* v_Person) const;								//View a Person member with details
 
 public:
 	MainVewMenuInterface();

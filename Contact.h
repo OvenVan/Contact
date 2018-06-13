@@ -21,7 +21,7 @@
 class Contact : public ContactInterface, public ContactInit
 {
 private:
-	MainStrategy* setMainStrategy(int);
+	MainStrategy* setMainStrategy(int);		//override from ContactInterface
 public:
 	Contact();
 	~Contact();

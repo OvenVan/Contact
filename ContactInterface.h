@@ -6,15 +6,15 @@
 #endif // _MSC_VER > 1000
 
 #include "MainStrategy.h"
+#include "CheckInterface.h"
 
-class ContactInterface
+class ContactInterface : public CheckInterface
 {
 private:
 	MainStrategy* mainStrategy;
 	virtual MainStrategy* setMainStrategy(int) = 0;
-
 public:
-	virtual int main_menu();
+	int main_menu();
 	virtual ~ContactInterface(){};
 };
 
