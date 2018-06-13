@@ -14,7 +14,6 @@ class ContactInit
 public:
 	virtual int refresh() const = 0;	
 	virtual void welcome() const= 0;
-	//virtual void joke() const = 0;
 
 	virtual ~ContactInit(){};
 

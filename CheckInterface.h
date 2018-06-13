@@ -16,7 +16,7 @@ class CheckInterface
 public:
 	bool check(Person&, const bool _check_repe) const;
 	bool check_exact(const Person&, const string) const;		//check if index.name == info_str
-	virtual ~CheckInterface();
+	virtual ~CheckInterface(){};
 
 private:
 	vector<string> part_tq(const Person&, const char* const) const;

@@ -5,14 +5,6 @@
 #include "stdafx.h"
 #include "CheckInterface.h"
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
-CheckInterface::~CheckInterface()
-{
-
-}
 
 bool CheckInterface::check(Person& person, const bool _check_repe) const {	
 	int i = 0, j = 0;
