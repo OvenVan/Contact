@@ -30,7 +30,3 @@ Person* ViewFuzzyMenu::doViewStrategy(){
 	}
 	return anythingView(chosen_item);
 }
-
-ViewStrategy* ViewFuzzyMenuFactory::createStrategy(){
-	return (new ViewFuzzyMenu);
-}

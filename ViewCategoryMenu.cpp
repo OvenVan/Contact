@@ -34,7 +34,3 @@ Person* ViewCategoryMenu::doViewStrategy(){
 	}
 	return anythingView(chosen_item);
 }
-
-ViewStrategy* ViewCategoryMenuFactory::createStrategy(){
-	return (new ViewCategoryMenu);
-}

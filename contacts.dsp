@@ -142,10 +142,6 @@ SOURCE=.\ViewExactMenu.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\ViewFactory.cpp
-# End Source File
-# Begin Source File
-
 SOURCE=.\ViewFuzzyMenu.cpp
 # End Source File
 # Begin Source File
@@ -211,10 +207,6 @@ SOURCE=.\ViewCategoryMenu.h
 # Begin Source File
 
 SOURCE=.\ViewExactMenu.h
-# End Source File
-# Begin Source File
-
-SOURCE=.\ViewFactory.h
 # End Source File
 # Begin Source File
 

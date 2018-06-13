@@ -33,8 +33,3 @@ Person* ViewAllMenu::doViewStrategy(){
 	}
 	return anythingView(chosen_item);
 }
-
-ViewStrategy* ViewAllMenuFactory::createStrategy(){
-	return (new ViewAllMenu);
-}
-

@@ -34,7 +34,3 @@ Person* ViewExactMenu::doViewStrategy(){
 	}
 	return anythingView(chosen_item);	
 }	
-
-ViewStrategy* ViewExactMenuFactory::createStrategy(){
-	return (new ViewExactMenu());
-}

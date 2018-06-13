@@ -19,7 +19,25 @@ MainVewMenu::~MainVewMenu()
 
 }
 
-void MainVewMenu::before_doMainStrategy(){
+ViewStrategy* MainVewMenu::setViewStrategy(int slct_num){
+
+	switch(slct_num){
+	case '1':
+		return new ViewExactMenu();
+	case '2':
+		return new ViewFuzzyMenu();
+	case '3':
+		return new ViewCategoryMenu();
+	case '4':
+		return new ViewAllMenu();
+	case '5':
+		break;
+	}
+	return NULL;
+}
+
+int MainVewMenu::doMainStrategy()
+{
 	int fuckin_stupid = 0;
 	char slct_num = 0;
 	do{
@@ -47,27 +65,9 @@ void MainVewMenu::before_doMainStrategy(){
 		slct_num = getch();
 		fuckin_stupid++;
 	}while((slct_num<'1') || (slct_num>'5'));
-	switch(slct_num){
-	case '1':
-		viewStrategy = new ViewExactMenu();
-		break;
-	case '2':
-		viewStrategy = new ViewFuzzyMenu();
-		break;
-	case '3':
-		viewStrategy = new ViewCategoryMenu();
-		break;
-	case '4':
-		viewStrategy = new ViewAllMenu();
-		break;
-	case '5':
-		break;
-	}
-	return;
-}
 
-int MainVewMenu::doMainStrategy()
-{
+	viewStrategy = setViewStrategy(slct_num);
+
 	view(*(viewStrategy->doViewStrategy()));
 	return 0;
 }

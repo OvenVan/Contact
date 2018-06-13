@@ -32,7 +32,7 @@ protected:
 private:
 	ViewStrategy* viewStrategy;
 
-	void before_doMainStrategy();
+	ViewStrategy* setViewStrategy(int);
 	int view(Person& v_Person) const;								//View a Person member with details
 
 
