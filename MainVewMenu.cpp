@@ -54,17 +54,21 @@ void MainVewMenu::before_doMainStrategy(){
 		//		 "exact");
 		//viewStrategy =
 		viewStrategy = new ViewExactMenu();
+		//viewStrategy = new ViewExactMenu();
 		break;
 	case '2':
 		//exfz_vew("=====Fuzzy Query Contact===============", 
 		//		 "\tEnter infomation that needs to be querying(accroding to NAME, TEL, ADDR): ", 
 		//		 "fuzzy");
+		viewStrategy = new ViewFuzzyMenu();
 		break;
 	case '3':
 		//cgy_vew();
+		viewStrategy = new ViewCategoryMenu();
 		break;
 	case '4':
 		//all_vew();
+		viewStrategy = new ViewAllMenu();
 		break;
 	case '5':
 		break;
@@ -74,8 +78,14 @@ void MainVewMenu::before_doMainStrategy(){
 
 int MainVewMenu::doMainStrategy()
 {
+	view(*(viewStrategy->doViewStrategy()));
 	return 0;
 }
+
+
+
+
+
 
 bool MainVewMenu::delete_prsn(Person& del_Person) const{
 	char y_n;
@@ -217,87 +227,50 @@ int MainVewMenu::modify_prsn(Person& m_Person) const{
 
 	return 0;
 }
-/*
-int MainVewMenu::exfz_vew(const char* title, const char* descp, const char* flag) const{
-	string info_str;
-	Person* viewPerson = NULL;
-
-	system("cls");
-	cout<<endl;
-	cout<<title<<endl<<endl;
-	cout<<descp;
-	cin.clear();
-	cin.sync();
-	cin>>info_str;
-	if (info_str == ""){
-		cout<<"\n\n\t\tNo Infomation Found!\n";
-	}
-	else{	
-		if (flag == "exact")
-			viewPerson = exactView(info_str);
-		else
-			viewPerson = fuzzyView(info_str);
-		if (viewPerson != NULL){
-			view(*viewPerson);
-		}
-	}
-	return 0;
-}
-
-int MainVewMenu::cgy_vew() const{
-	string info_str;
-	vector<string> cur_ctg;
-	string tmp_ctg;
-	bool add_ctg;
-	int index = 0;
-	int i = 0,j = 0;
-	Person* viewPerson = NULL;
-
-	system("cls");
-	cout<<endl;
-	cout<<"=====List by Category==================\n\n";
-	cout<<"\tCurrent category:";
-	for (i = 0; i<contact_item.size();i++){
-		tmp_ctg = &*contact_item[i]->category;
-		if (tmp_ctg == "")
-			tmp_ctg = "Unset";
-		add_ctg = true;
-		for (j = 0; j<cur_ctg.size();j++){
-			if (cur_ctg[j] == tmp_ctg)
-				add_ctg = false;
-		}
-		if (add_ctg){
-			cur_ctg.push_back(tmp_ctg);
-			cout<<"  "<<tmp_ctg;
-		}
-	}
-
-	cout<<"\n\n\tEnter category infomation:";
-	cin.clear();
-	cin.sync();
-	cin>>info_str;
-	if ((info_str == "Unset") || (info_str == "unset"))
-		info_str = "";
-	
-	viewPerson =categoryView(info_str);
-	if (viewPerson != NULL){
-		view(*viewPerson);
-	}
-	return 0;
-
-}
-int MainVewMenu::all_vew() const{
-	int i = 0,j = 0;	
-	Person* viewPerson = NULL;
-
-	system("cls");
-	cout<<endl;
-	cout<<"=====ALL Category======================\n\n";
-	viewPerson = allView();			//all_vew called allView;
-	if (viewPerson != NULL){
-		view(*viewPerson);
+			
+int MainVewMenu::view(Person& v_Person) const{
+	bool refresh = true;
+	string addr = ".\\contact\\";
+	int fuckin_stupid = 0;
+	int slct_num = 0;
+	do{
+		print_prsn(v_Person,"=====VIEW Contact====================\n",refresh);
+		cout<<endl<<endl;	
+		cout<<" ====Options=======\n|\n";
+		if(refresh) Sleep(20);				
+		cout<<" -------Delete_1---\n|\n";
+		if(refresh) Sleep(20);
+		cout<<" -------Modify_2---\n|\n";	
+		if(refresh) Sleep(20);
+		cout<<" -------Back___3---\n\n";
+		if(refresh) Sleep(20);				
+		cin.clear();
+		cin.sync();
+		if (fuckin_stupid != 0)
+			cout<<"\t\tError Inputing!\n";
+		cout<<"\tEnter number[1-3] to select the corresponding function: ";
+		cin.clear();
+		cin.sync();
+		slct_num = getch();
+		fuckin_stupid++;
+		refresh = false;
+	}while((slct_num<'1') || (slct_num>'3'));
+			
+	switch (slct_num){
+	case '1':
+		delete_prsn(v_Person);
+		cin.clear();
+		cin.sync();
+		getch();
+		break;
+	case '2':
+		modify_prsn(v_Person);
+		cin.clear();
+		cin.sync();
+		getch();
+		break;
+	case '3':
+		break;
 	}
 	return 0;
 }
-
-  */

@@ -10,7 +10,13 @@
 #endif // _MSC_VER > 1000
 
 #include "MainStrategy.h"
-#include "ViewFactory.h"
+//#include "ViewFactory.h"
+
+#include "ViewExactMenu.h"
+#include "ViewAllMenu.h"
+#include "ViewCategoryMenu.h"
+#include "ViewFuzzyMenu.h"
+
 
 class MainVewMenu : public MainStrategy
 {
@@ -27,10 +33,11 @@ private:
 	ViewStrategy* viewStrategy;
 
 	void before_doMainStrategy();
-	int exfz_vew(const char*, const char*, const char*) const{return 0;}		//Menu of Exact/Fuzzy view
-	int cgy_vew() const{return 0;}										//Menu of Category view
-	int all_vew() const{return 0;}											//Menu of All view
-	bool check(Person&, const bool _check_repe) const{return true;}
+	int view(Person& v_Person) const;								//View a Person member with details
+
+
+
+
 };
 
 #endif // !defined(AFX_MAINVEWMENU_H__30EDC353_618B_4196_A8BB_4A59557068CD__INCLUDED_)

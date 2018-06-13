@@ -11,7 +11,7 @@
 
 #include "ViewStrategy.h"
 
-class ViewFactory  
+class ViewFactory	//abstrat class interface
 {
 public:
 	virtual ViewStrategy* createStrategy() = 0;

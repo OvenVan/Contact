@@ -10,13 +10,19 @@
 #endif // _MSC_VER > 1000
 
 #include "Person.h"
+#include "CheckInterface.h"
 
-class ViewStrategy  
+class ViewStrategy : public CheckInterface
 {
 public:
 
 	virtual ~ViewStrategy();
 	virtual Person* doViewStrategy() = 0;
+
+protected:
+	
+	const char* title_vew(const char*, const char*) const;
+	Person* anythingView(vector<int>&) const;
 
 
 };

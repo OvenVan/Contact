@@ -17,7 +17,9 @@ class ViewExactMenu : public ViewStrategy
 public:
 	ViewExactMenu();
 	virtual ~ViewExactMenu();
-	Person* doViewStrategy(){return NULL;}
+	Person* doViewStrategy();
+
+private:
 
 };
 

@@ -10,8 +10,9 @@
 #endif // _MSC_VER > 1000
 
 #include "Person.h"
+#include "CheckInterface.h"
 
-class MainStrategy  
+class MainStrategy : public CheckInterface
 {
 public:
 	MainStrategy();
@@ -19,11 +20,14 @@ public:
 	virtual int doMainStrategy() = 0;
 
 protected:
-	virtual void printAll() const{return;}	
-	virtual void print_prsn(const Person&, const string, bool) const{return;}
+	virtual void printAll() const;	
+	virtual void print_prsn(const Person&, const string, bool) const;
+
+
+
 
 };
 
-extern vector<Person*> contact_item;
+//extern vector<Person*> contact_item;
 
 #endif // !defined(AFX_MAINSTRATEGY_H__EC9C2730_7A1B_40AF_AB90_CC8AC25EC1B5__INCLUDED_)
