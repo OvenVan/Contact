@@ -121,6 +121,10 @@ SOURCE=.\MainVewMenu.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\MainVewMenuInterface.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\Person.cpp
 # End Source File
 # Begin Source File
@@ -187,6 +191,10 @@ SOURCE=.\MainStrategy.h
 # Begin Source File
 
 SOURCE=.\MainVewMenu.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\MainVewMenuInterface.h
 # End Source File
 # Begin Source File
 

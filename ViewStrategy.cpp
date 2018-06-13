@@ -16,7 +16,7 @@ ViewStrategy::~ViewStrategy()
 }
 
 
-const char* ViewStrategy::title_vew(const char* title, const char* descp) const{
+string ViewStrategy::title_vew(const char* title, const char* descp) const{
 	string info_str;
 	Person* viewPerson = NULL;
 
@@ -27,14 +27,9 @@ const char* ViewStrategy::title_vew(const char* title, const char* descp) const{
 	cin.clear();
 	cin.sync();
 	cin>>info_str;
-	if (info_str == ""){
-		cout<<"\n\n\t\tNo Infomation Found!\n";
-		return NULL;
-	}
-	else{	
-		return info_str.c_str();
-	}
-	return 0;
+
+	return info_str;
+
 }
 
 
@@ -77,7 +72,7 @@ void ViewStrategy::all_vew() const{
 	return;
 }
 
-const char* ViewStrategy::category_vew() const{
+string ViewStrategy::category_vew() const{
 	string info_str;
 	vector<string> cur_ctg;
 	string tmp_ctg;
@@ -111,5 +106,5 @@ const char* ViewStrategy::category_vew() const{
 	if ((info_str == "Unset") || (info_str == "unset"))
 		info_str = "";
 
-	return info_str.c_str();
+	return info_str;
 }
