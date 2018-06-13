@@ -49,25 +49,15 @@ void MainVewMenu::before_doMainStrategy(){
 	}while((slct_num<'1') || (slct_num>'5'));
 	switch(slct_num){
 	case '1':
-		//exfz_vew("=====Exact Query Contact===============", 
-		//		 "\tEnter infomation that needs to be querying: ", 
-		//		 "exact");
-		//viewStrategy =
 		viewStrategy = new ViewExactMenu();
-		//viewStrategy = new ViewExactMenu();
 		break;
 	case '2':
-		//exfz_vew("=====Fuzzy Query Contact===============", 
-		//		 "\tEnter infomation that needs to be querying(accroding to NAME, TEL, ADDR): ", 
-		//		 "fuzzy");
 		viewStrategy = new ViewFuzzyMenu();
 		break;
 	case '3':
-		//cgy_vew();
 		viewStrategy = new ViewCategoryMenu();
 		break;
 	case '4':
-		//all_vew();
 		viewStrategy = new ViewAllMenu();
 		break;
 	case '5':
@@ -81,11 +71,6 @@ int MainVewMenu::doMainStrategy()
 	view(*(viewStrategy->doViewStrategy()));
 	return 0;
 }
-
-
-
-
-
 
 bool MainVewMenu::delete_prsn(Person& del_Person) const{
 	char y_n;

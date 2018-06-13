@@ -17,7 +17,7 @@ class ViewFuzzyMenu : public ViewStrategy
 public:
 	ViewFuzzyMenu();
 	virtual ~ViewFuzzyMenu();
-	Person* doViewStrategy(){return NULL;}
+	Person* doViewStrategy();
 
 };
 

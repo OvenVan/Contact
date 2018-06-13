@@ -17,7 +17,7 @@ class ViewCategoryMenu : public ViewStrategy
 public:
 	ViewCategoryMenu();
 	virtual ~ViewCategoryMenu();
-	Person* doViewStrategy(){return NULL;}
+	Person* doViewStrategy();
 
 };
 

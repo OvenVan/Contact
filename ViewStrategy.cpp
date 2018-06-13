@@ -37,6 +37,8 @@ const char* ViewStrategy::title_vew(const char* title, const char* descp) const{
 	return 0;
 }
 
+
+
 Person* ViewStrategy::anythingView(vector<int>& chosen_item) const{
 	int index = 0;
 
@@ -63,4 +65,51 @@ Person* ViewStrategy::anythingView(vector<int>& chosen_item) const{
 		}
 		return NULL;
 	}//if (chosen_item.size() == 0)
+}
+
+void ViewStrategy::all_vew() const{
+	int i = 0,j = 0;	
+	Person* viewPerson = NULL;
+
+	system("cls");
+	cout<<endl;
+	cout<<"=====ALL Category======================\n\n";
+	return;
+}
+
+const char* ViewStrategy::category_vew() const{
+	string info_str;
+	vector<string> cur_ctg;
+	string tmp_ctg;
+	bool add_ctg;
+	int index = 0;
+	int i = 0,j = 0;
+
+	system("cls");
+	cout<<endl;
+	cout<<"=====List by Category==================\n\n";
+	cout<<"\tCurrent category:";
+	for (i = 0; i<contact_item.size();i++){
+		tmp_ctg = &*contact_item[i]->category;
+		if (tmp_ctg == "")
+			tmp_ctg = "Unset";
+		add_ctg = true;
+		for (j = 0; j<cur_ctg.size();j++){
+			if (cur_ctg[j] == tmp_ctg)
+				add_ctg = false;
+		}
+		if (add_ctg){
+			cur_ctg.push_back(tmp_ctg);
+			cout<<"  "<<tmp_ctg;
+		}
+	}
+
+	cout<<"\n\n\tEnter category infomation:";
+	cin.clear();
+	cin.sync();
+	cin>>info_str;
+	if ((info_str == "Unset") || (info_str == "unset"))
+		info_str = "";
+
+	return info_str.c_str();
 }

@@ -17,7 +17,7 @@ class ViewAllMenu : public ViewStrategy
 public:
 	ViewAllMenu();
 	virtual ~ViewAllMenu();
-	Person* doViewStrategy(){return NULL;}
+	Person* doViewStrategy();
 };
 
 class ViewAllMenuFactory : public ViewFactory
