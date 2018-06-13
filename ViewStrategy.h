@@ -9,7 +9,6 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-#include "Person.h"
 #include "CheckInterface.h"
 
 class ViewStrategy : public CheckInterface

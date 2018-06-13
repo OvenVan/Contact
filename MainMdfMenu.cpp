@@ -23,7 +23,6 @@ MainMdfMenu::doMainStrategy()
 {
 	int num = contact_item.size();
 	int index = 0;
-	char* c_item[8] = {"Name","Tel","Address","Gender:(M for Male, F for Female)","Zip","Mail","QQ","Category"};
 
 	system("cls");
 	cout<<endl;
