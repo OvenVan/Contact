@@ -35,5 +35,6 @@ int ContactInterface::main_menu(){
 	if (mainStrategy == NULL)
 		return -1;
 	mainStrategy->doMainStrategy();
+	removeMainStrategy(mainStrategy);
 	return 0;
 }

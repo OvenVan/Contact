@@ -1,4 +1,4 @@
-// MainDelMenu.h: interface for the MainDelMenu class.
+// MainDelMenu.h: Application Library
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -14,10 +14,8 @@
 class MainDelMenu : public MainStrategy
 {
 public:
-	MainDelMenu();
-	virtual ~MainDelMenu();
+	virtual ~MainDelMenu(){};
 	int doMainStrategy();
-
 };
 
 #endif // !defined(AFX_MAINDELMENU_H__59F8280E_220C_4D11_9B6E_96B22BB96034__INCLUDED_)

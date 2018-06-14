@@ -1,4 +1,4 @@
-// ViewFuzzyMenu.h: interface for the ViewFuzzyMenu class.
+// ViewFuzzyMenu.h: Application Library
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -14,10 +14,8 @@
 class ViewFuzzyMenu : public ViewStrategy
 {
 public:
-	ViewFuzzyMenu();
-	virtual ~ViewFuzzyMenu();
+	virtual ~ViewFuzzyMenu(){};
 	Person* doViewStrategy();
-
 };
 
 #endif // !defined(AFX_VIEWFUZZYMENU_H__D10D5C93_EEF6_40EA_AEBB_C289EE09C1EF__INCLUDED_)

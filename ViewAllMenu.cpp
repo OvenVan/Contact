@@ -5,20 +5,6 @@
 #include "stdafx.h"
 #include "ViewAllMenu.h"
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
-ViewAllMenu::ViewAllMenu()
-{
-
-}
-
-ViewAllMenu::~ViewAllMenu()
-{
-
-}
-
 Person* ViewAllMenu::doViewStrategy(){
 	int num = contact_item.size();
 	int index = 0;

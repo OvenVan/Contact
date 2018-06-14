@@ -5,20 +5,6 @@
 #include "stdafx.h"
 #include "MainVewMenuInterface.h"
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
-MainVewMenuInterface::MainVewMenuInterface()
-{
-
-}
-
-MainVewMenuInterface::~MainVewMenuInterface()
-{
-
-}
-
 int MainVewMenuInterface::view(Person* v_Person) const{
 	if (v_Person == NULL)
 		return -1;
@@ -99,11 +85,11 @@ int MainVewMenuInterface::doMainStrategy()
 		fuckin_stupid++;
 	}while((slct_num<'1') || (slct_num>'5'));
 
-	viewStrategy = setViewStrategy(slct_num);
+	viewStrategy = setViewStrategy(slct_num - '0');
 	if (viewStrategy == NULL)
 		return -1;
-	
 	view(viewStrategy->doViewStrategy());
+	removeViewStrategy(viewStrategy);
 	return 0;
 }
 			

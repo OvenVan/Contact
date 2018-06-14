@@ -1,4 +1,4 @@
-// MainNewMenu.h: interface for the MainNewMenu class.
+// MainNewMenu.h: Application Library
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -13,14 +13,11 @@
 
 class MainNewMenu : public MainStrategy
 {
-public:
-	MainNewMenu();
-	virtual ~MainNewMenu();
-	int doMainStrategy();
-
-protected:
+private:
 	bool create() const;
-
+public:
+	virtual ~MainNewMenu(){};
+	int doMainStrategy();
 };
 
 #endif // !defined(AFX_MAINNEWMENU_H__FAE001ED_B300_4102_8F33_09E79DFDAEA6__INCLUDED_)

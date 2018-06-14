@@ -5,20 +5,6 @@
 #include "stdafx.h"
 #include "ViewCategoryMenu.h"
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
-ViewCategoryMenu::ViewCategoryMenu()
-{
-
-}
-
-ViewCategoryMenu::~ViewCategoryMenu()
-{
-
-}
-
 Person* ViewCategoryMenu::doViewStrategy(){
 	string info_str = ViewStrategy::category_vew();
 	int num = contact_item.size();

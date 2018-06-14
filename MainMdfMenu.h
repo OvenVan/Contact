@@ -1,4 +1,4 @@
-// MainMdfMenu.h: interface for the MainMdfMenu class.
+// MainMdfMenu.h: Application Library
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -14,10 +14,8 @@
 class MainMdfMenu : public MainStrategy
 {
 public:
-	MainMdfMenu();
-	virtual ~MainMdfMenu();
+	virtual ~MainMdfMenu(){};
 	int doMainStrategy();
-
 };
 
 #endif // !defined(AFX_MAINMDFMENU_H__4AF95322_636F_4CB7_B574_C8FB878AFB87__INCLUDED_)

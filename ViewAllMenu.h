@@ -1,4 +1,4 @@
-// ViewAllMenu.h: interface for the ViewAllMenu class.
+// ViewAllMenu.h: Application Library
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -14,8 +14,7 @@
 class ViewAllMenu : public ViewStrategy
 {
 public:
-	ViewAllMenu();
-	virtual ~ViewAllMenu();
+	virtual ~ViewAllMenu(){};
 	Person* doViewStrategy();
 };
 

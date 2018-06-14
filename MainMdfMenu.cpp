@@ -5,20 +5,6 @@
 #include "stdafx.h"
 #include "MainMdfMenu.h"
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
-MainMdfMenu::MainMdfMenu()
-{
-
-}
-
-MainMdfMenu::~MainMdfMenu()
-{
-
-}
-
 MainMdfMenu::doMainStrategy()
 {
 	int num = contact_item.size();

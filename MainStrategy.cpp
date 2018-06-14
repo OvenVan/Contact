@@ -5,20 +5,6 @@
 #include "stdafx.h"
 #include "MainStrategy.h"
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
-MainStrategy::MainStrategy()
-{
-
-}
-
-MainStrategy::~MainStrategy()
-{
-
-}
-
 void MainStrategy::print_prsn(const Person& prt_Person, const string info, bool refresh) const{
 	system("cls");
 	cout<<endl<<info;
@@ -74,7 +60,7 @@ bool MainStrategy::delete_prsn(Person& del_Person) const{
 	return false;
 }
 
-int MainStrategy::modify_prsn(Person& m_Person) const{
+bool MainStrategy::modify_prsn(Person& m_Person) const{
 	char t_c;
 	char y_n;
 	string addr = ".\\contact\\";
@@ -91,7 +77,8 @@ int MainStrategy::modify_prsn(Person& m_Person) const{
 	cout<<"\n\t*Tel:     "<<m_Person.tel<<"\t:(eg:+12345) ";
 		cin.clear();cin.sync();
 		t_str = "";
-		while((t_c = getchar()) != '\n'){t_str += t_c;}
+		while((t_c = getchar()) != '\n')
+			{t_str += t_c;}
 		if (t_str[0] == '+'){
 			t_str.erase(&t_str[0]);
 			string _t_str = t_info.tel;
@@ -108,7 +95,8 @@ int MainStrategy::modify_prsn(Person& m_Person) const{
 	cout<<"\tAddress:  "<<m_Person.addr<<"\t: ";
 		cin.clear();cin.sync();
 		t_str = "";
-		while((t_c = getchar()) != '\n') {t_str += t_c;}
+		while((t_c = getchar()) != '\n')
+			{t_str += t_c;}
 		if (t_str != "") strcpy(t_info.addr,t_str.c_str());
 		if (t_str == " ") strcpy(t_info.addr,"");
 
@@ -124,21 +112,24 @@ int MainStrategy::modify_prsn(Person& m_Person) const{
 	cout<<"\tZip:      "<<m_Person.zip<<"\t: ";
 		cin.clear();cin.sync();
 		t_str = "";
-		while((t_c = getchar()) != '\n'){t_str += t_c;}
+		while((t_c = getchar()) != '\n')
+			{t_str += t_c;}
 		if (t_str != "") strcpy(t_info.zip,t_str.c_str());
 		if (t_str == " ") strcpy(t_info.zip,"");
 
 	cout<<"\tMail:     "<<m_Person.mail<<"\t: ";
 		cin.clear();cin.sync();
 		t_str = "";
-		while((t_c = getchar()) != '\n'){t_str += t_c;}
+		while((t_c = getchar()) != '\n')
+			{t_str += t_c;}
 		if (t_str != "") strcpy(t_info.mail,t_str.c_str());
 		if (t_str == " ") strcpy(t_info.mail,"");
 
 	cout<<"\t*QQ:      "<<m_Person.qq<<"\t:(eg:+12345) ";
 		cin.clear();cin.sync();
 		t_str = "";
-		while((t_c = getchar()) != '\n'){t_str += t_c;}
+		while((t_c = getchar()) != '\n')
+			{t_str += t_c;}
 		if (t_str[0] == '+'){
 			t_str.erase(&t_str[0]);
 			string _t_str = t_info.qq;
@@ -155,7 +146,8 @@ int MainStrategy::modify_prsn(Person& m_Person) const{
 	cout<<"\tCategory: "<<m_Person.category<<"\t: ";
 		cin.clear();cin.sync();
 		t_str = "";
-		while((t_c = getchar()) != '\n'){t_str += t_c;}
+		while((t_c = getchar()) != '\n')
+			{t_str += t_c;}
 		if (t_str != "") strcpy(t_info.category,t_str.c_str());
 		if (t_str == " ") strcpy(t_info.category,"");
 
@@ -167,18 +159,18 @@ int MainStrategy::modify_prsn(Person& m_Person) const{
 	if ((y_n == 'y') || (y_n == 'Y')){
 		if(!check(t_info, false)  ){
 			cout<<"\n\t\tInfomation Error!";
-			return -1;
+			return false;
 		}
 		else{
 			FILE *fp = fopen(addr.c_str(),"wb+");
 			if (fp == NULL	){
 				cout<<"\n\t\tError opening file!\n";
-				return -1;
+				return false;
 			}
 			else
 				if (fwrite(&t_info,sizeof(Person), 1, fp) != 1){
 					cout<<"\n\t\tError writing to file!\n";
-					return -1;
+					return false;
 				}
 				else{
 					cout<<"\n\t\tModify succeed!\n";
@@ -188,5 +180,5 @@ int MainStrategy::modify_prsn(Person& m_Person) const{
 	}
 	else
 		cout<<"\n\t\tCanceled!\n";
-	return 0;
+	return true;
 }

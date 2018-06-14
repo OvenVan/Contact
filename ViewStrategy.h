@@ -1,4 +1,4 @@
-// ViewStrategy.h: interface for the ViewStrategy class.
+// ViewStrategy.h: Frame Gallary
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -13,18 +13,14 @@
 
 class ViewStrategy : public CheckInterface
 {
-public:
-
-	virtual ~ViewStrategy();
-	virtual Person* doViewStrategy() = 0;
-
 protected:
 	string title_vew(const char*, const char*) const;		//for exact/fuzzy view
 	void all_vew() const;
 	string category_vew() const;
 	Person* anythingView(vector<int>&) const;
-
-
+public:
+	virtual ~ViewStrategy();
+	virtual Person* doViewStrategy() = 0;
 };
 
 #endif // !defined(AFX_VIEWSTRATEGY_H__EC4D2837_CB82_4C72_90B0_0F5B88767A63__INCLUDED_)

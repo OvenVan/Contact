@@ -1,4 +1,4 @@
-// Person.h: interface for the Person class.
+// Person.h: Frame Gallary
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -17,11 +17,11 @@
 #define MAXQQ	40
 #define MAXCTGY	20
 
-
-
 class Person  
 {
 public:
+	Person();
+	~Person();
 	//why procted does not work?
 	char name[MAXNAME];
 	char sex;
@@ -31,9 +31,6 @@ public:
 	char mail[MAXMAIL];
 	char qq[MAXQQ];
 	char category[MAXCTGY];
-
-	Person();
-	~Person();
 };
 
 extern vector<Person*> contact_item;

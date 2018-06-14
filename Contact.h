@@ -1,4 +1,4 @@
-// Contact.h: interface for the Contact class.
+// Contact.h: Application Library
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -22,10 +22,10 @@ class Contact : public ContactInterface, public ContactInit
 {
 private:
 	MainStrategy* setMainStrategy(int);		//override from ContactInterface
+	void removeMainStrategy(void*);
 public:
 	Contact();
 	~Contact();
-
 	int refresh() const;	
 	void welcome() const;
 };							

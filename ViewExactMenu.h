@@ -1,4 +1,4 @@
-// ViewExactMenu.h: interface for the ViewExactMenu class.
+// ViewExactMenu.h: Application Library
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -14,12 +14,8 @@
 class ViewExactMenu : public ViewStrategy
 {
 public:
-	ViewExactMenu();
-	virtual ~ViewExactMenu();
+	virtual ~ViewExactMenu(){};
 	Person* doViewStrategy();
-
-private:
-
 };
 
 #endif // !defined(AFX_VIEWEXACTMENU_H__33A9D84C_B321_4F0C_A59B_3777BF3AE004__INCLUDED_)

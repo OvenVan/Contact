@@ -5,20 +5,6 @@
 #include "stdafx.h"
 #include "ViewExactMenu.h"
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
-ViewExactMenu::ViewExactMenu()
-{
-
-}
-
-ViewExactMenu::~ViewExactMenu()
-{
-
-}
-
 Person* ViewExactMenu::doViewStrategy(){
 	string info_str = ViewStrategy::title_vew("=====Exact Query Contact===============", "\tEnter infomation that needs to be querying: ");
 	int num = contact_item.size();

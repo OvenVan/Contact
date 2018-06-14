@@ -5,20 +5,6 @@
 #include "stdafx.h"
 #include "MainNewMenu.h"
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
-MainNewMenu::MainNewMenu()
-{
-
-}
-
-MainNewMenu::~MainNewMenu()
-{
-
-}
-
 MainNewMenu::doMainStrategy()
 {
 	system("cls");

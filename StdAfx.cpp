@@ -6,5 +6,5 @@
 #include "Contact.h"
 #include "Person.h"
 
-string errorMsg;
 vector<Person*> contact_item;
+string errorMsg;

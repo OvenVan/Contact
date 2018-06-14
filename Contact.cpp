@@ -39,6 +39,10 @@ MainStrategy* Contact::setMainStrategy(int num){
 		return NULL;
 }
 
+void Contact::removeMainStrategy(void* p){
+	delete p;
+}
+
 void Contact::welcome() const{
 	int n = 0;
 	cout<<"\n\n\n----------Welcome to the Address Book System.--------\n\n";

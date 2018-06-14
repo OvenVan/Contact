@@ -5,16 +5,6 @@
 #include "stdafx.h"
 #include "ViewFuzzyMenu.h"
 
-ViewFuzzyMenu::ViewFuzzyMenu()
-{
-
-}
-
-ViewFuzzyMenu::~ViewFuzzyMenu()
-{
-
-}
-
 Person* ViewFuzzyMenu::doViewStrategy(){
 	string info_str = ViewStrategy::title_vew("=====Fuzzy Query Contact===============", "\tEnter infomation that needs to be querying: ");
 	int num = contact_item.size();

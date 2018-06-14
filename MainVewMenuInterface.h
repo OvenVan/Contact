@@ -1,4 +1,4 @@
-// MainVewMenuInterface.h: interface for the MainVewMenuInterface class.
+// MainVewMenuInterface.h: Frame Gallary
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -14,18 +14,15 @@
 
 class MainVewMenuInterface : public MainStrategy
 {
-public:
 private:
 	ViewStrategy* viewStrategy;
 
-	virtual ViewStrategy* setViewStrategy(int) = 0;
-	virtual int view(Person* v_Person) const;								//View a Person member with details
-
+	virtual ViewStrategy*  setViewStrategy(int) = 0;
+	virtual void				 removeViewStrategy(void*) = 0;
+	virtual int					  view(Person* v_Person) const;								//View a Person member with details
 public:
-	MainVewMenuInterface();
-	virtual ~MainVewMenuInterface();
+	virtual ~MainVewMenuInterface(){};
 	virtual int doMainStrategy();
-
 };
 
 #endif // !defined(AFX_MAINVEWMENUINTERFACE_H__7A32F346_890E_45E1_941B_4FC6A6A3714A__INCLUDED_)

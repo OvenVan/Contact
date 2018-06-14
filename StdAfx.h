@@ -20,7 +20,6 @@
 #include <map>
 #include <iostream>  
 #include <conio.h>
-
 using namespace std;
 
 #endif // !defined(AFX_STDAFX_H__F5925CEB_85C9_4293_8D63_288D374D3EDC__INCLUDED_)

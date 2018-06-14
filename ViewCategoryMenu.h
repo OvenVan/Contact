@@ -1,4 +1,4 @@
-// ViewCategoryMenu.h: interface for the ViewCategoryMenu class.
+// ViewCategoryMenu.h: Application Library
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -14,10 +14,8 @@
 class ViewCategoryMenu : public ViewStrategy
 {
 public:
-	ViewCategoryMenu();
-	virtual ~ViewCategoryMenu();
+	virtual ~ViewCategoryMenu(){};
 	Person* doViewStrategy();
-
 };
 
 #endif // !defined(AFX_VIEWCATEGORYMENU_H__48B023E6_1B4C_4082_A1E2_BB55EEC3B766__INCLUDED_)

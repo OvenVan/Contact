@@ -1,4 +1,4 @@
-// MainVewMenu.h: interface for the MainVewMenu class.
+// MainVewMenu.h: Application Library
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -16,11 +16,11 @@
 #include "ViewCategoryMenu.h"
 #include "ViewFuzzyMenu.h"
 
-
 class MainVewMenu : public MainVewMenuInterface
 {
 private:
-	ViewStrategy* setViewStrategy(int);
+	ViewStrategy*	setViewStrategy(int);
+	void				  removeViewStrategy(void*);
 public:
 	MainVewMenu();
 	virtual ~MainVewMenu();
