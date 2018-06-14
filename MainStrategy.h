@@ -13,14 +13,14 @@
 
 class MainStrategy : public CheckInterface
 {
+public:
+	virtual ~MainStrategy(){};
+	virtual int doMainStrategy() = 0;
 protected:
 	void printAll() const;
 	void print_prsn(const Person&, const string, bool) const;
 	bool delete_prsn(Person&) const;
 	bool modify_prsn(Person&) const;								//Way to modify a spefic Person member
-public:
-	virtual ~MainStrategy(){};
-	virtual int doMainStrategy() = 0;
 };
 
 //extern vector<Person*> contact_item;

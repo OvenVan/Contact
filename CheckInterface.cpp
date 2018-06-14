@@ -60,7 +60,7 @@ bool CheckInterface::check(Person& person, const bool _check_repe) const {
 	if (strcmp(person.qq, "") != 0){
 		re_write = "";
 		for (i = 0; i<strlen(person.qq); i++)
-			if (!(( (person.qq[i]>='0')&&(person.qq[i]<='9') ) || (person.qq[i] = ','))){
+			if (!(( (person.qq[i]>='0')&&(person.qq[i]<='9') ) || (person.qq[i] == ','))){
 				errorMsg = "Unknown character in QQ option.";
 				return false;
 			}
