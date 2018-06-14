@@ -20,6 +20,8 @@ private:
 
 	virtual MainStrategy* setMainStrategy(int) = 0;
 	virtual void removeMainStrategy(void*) = 0;
+protected:
+	int MainFunctionsNum;
 public:
 	int main_menu();
 	virtual ~ContactInterface(){};

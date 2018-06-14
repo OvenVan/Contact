@@ -7,6 +7,7 @@ extern string errorMsg;
 
 Contact::Contact()
 {
+	MainFunctionsNum = 5;
 	refresh();
 }
 
@@ -22,19 +23,14 @@ MainStrategy* Contact::setMainStrategy(int num){
 		switch (num){
 		case 1:
 			return new MainNewMenu();
-			break;
 		case 2:
 			return new MainDelMenu();
-			break;
 		case 3:
 			return new MainMdfMenu();
-			break;
 		case 4:
 			return new MainVewMenu();
-			break;
 		case 5:
 			return NULL;
-			break;
 		}
 		return NULL;
 }
@@ -60,7 +56,6 @@ void Contact::welcome() const{
 	else{
 		cout<<"\t"<<"no contact has been imported.\n";
 	}
-	
 	Sleep(50);
 	cout<<"  Login...";
 	Sleep(300);

@@ -18,13 +18,13 @@ int ContactInterface::main_menu(){
 
 		if (fuckin_stupid != 0)
 			cout<<"\t\tError Inputing!\n";
-		cout<<"\tEnter number[1-5] to select the corresponding function: ";
+		cout<<"\tEnter number[1-"<<MainFunctionsNum<<"] to select the corresponding function: ";
 		
 		cin.clear();
 		cin.sync();
 		rtn_int = getch();
 		fuckin_stupid++;
-	}while((rtn_int<'1') || (rtn_int>'5'));
+	}while((rtn_int<'1') || (rtn_int>'0' + MainFunctionsNum));
 
 	mainStrategy = setMainStrategy(rtn_int-'0');
 	if (mainStrategy == NULL)

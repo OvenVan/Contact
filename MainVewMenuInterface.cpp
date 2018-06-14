@@ -66,13 +66,13 @@ int MainVewMenuInterface::doMainStrategy()
 
 		if (fuckin_stupid != 0)
 			cout<<"\t\tError Inputing!\n";
-		cout<<"\tEnter number[1-5] to select the corresponding function: ";
+		cout<<"\tEnter number[1-"<<ViewFunctionsNum<<"] to select the corresponding function: ";
 		
 		cin.clear();
 		cin.sync();
 		slct_num = getch();
 		fuckin_stupid++;
-	}while((slct_num<'1') || (slct_num>'5'));
+	}while((slct_num<'1') || (slct_num>'0' + ViewFunctionsNum));
 
 	viewStrategy = setViewStrategy(slct_num - '0');
 	if (viewStrategy == NULL)

@@ -22,6 +22,7 @@ private:
 	ViewStrategy*	setViewStrategy(int);
 	void				  removeViewStrategy(void*);
 public:
+	MainVewMenu();
 	virtual ~MainVewMenu(){};
 };
 

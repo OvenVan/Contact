@@ -5,6 +5,10 @@
 #include "stdafx.h"
 #include "MainVewMenu.h"
 
+MainVewMenu::MainVewMenu(){
+	ViewFunctionsNum = 5;
+}
+
 ViewStrategy* MainVewMenu::setViewStrategy(int slct_num){
 
 	switch(slct_num){

@@ -117,6 +117,10 @@ SOURCE=.\MainStrategy.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\MainTestMenu.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\MainVewMenu.cpp
 # End Source File
 # Begin Source File
@@ -191,6 +195,10 @@ SOURCE=.\MainNewMenu.h
 # Begin Source File
 
 SOURCE=.\MainStrategy.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\MainTestMenu.h
 # End Source File
 # Begin Source File
 

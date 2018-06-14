@@ -18,6 +18,8 @@
 #include "MainMdfMenu.h"
 #include "MainVewMenu.h"
 
+#include "MainTestMenu.h"
+
 class Contact : public ContactInterface, public ContactInit
 {
 private:
