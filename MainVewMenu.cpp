@@ -5,20 +5,6 @@
 #include "stdafx.h"
 #include "MainVewMenu.h"
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
-MainVewMenu::MainVewMenu()
-{
-
-}
-
-MainVewMenu::~MainVewMenu()
-{
-
-}
-
 ViewStrategy* MainVewMenu::setViewStrategy(int slct_num){
 
 	switch(slct_num){

@@ -129,6 +129,10 @@ SOURCE=.\Person.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\PrtMenuInterface.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\StdAfx.cpp
 # ADD CPP /Yc"stdafx.h"
 # End Source File
@@ -199,6 +203,10 @@ SOURCE=.\MainVewMenuInterface.h
 # Begin Source File
 
 SOURCE=.\person.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\PrtMenuInterface.h
 # End Source File
 # Begin Source File
 

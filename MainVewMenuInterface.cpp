@@ -5,25 +5,26 @@
 #include "stdafx.h"
 #include "MainVewMenuInterface.h"
 
+void sleep(){
+	Sleep(20);
+	return;
+}
+
 int MainVewMenuInterface::view(Person* v_Person) const{
 	if (v_Person == NULL)
 		return -1;
-
 	bool refresh = true;
 	string addr = ".\\contact\\";
 	int fuckin_stupid = 0;
 	int slct_num = 0;
 	do{
 		print_prsn(*v_Person,"=====VIEW Contact====================\n",refresh);
-		cout<<endl<<endl;	
-		cout<<" ====Options=======\n|\n";
-		if(refresh) Sleep(20);				
-		cout<<" -------Delete_1---\n|\n";
-		if(refresh) Sleep(20);
-		cout<<" -------Modify_2---\n|\n";	
-		if(refresh) Sleep(20);
-		cout<<" -------Back___3---\n\n";
-		if(refresh) Sleep(20);				
+		if (refresh){
+			readFile(".\\io\\View.io",sleep);
+		}
+		else{
+			readFile(".\\io\\View.io");
+		}
 		cin.clear();
 		cin.sync();
 		if (fuckin_stupid != 0)
@@ -61,19 +62,7 @@ int MainVewMenuInterface::doMainStrategy()
 	char slct_num = 0;
 	do{
 		system("cls");
-		cout<<endl;
-		cout<<"\t\t==========VIEW CONTACT========\n\t\t|\n";
-		cout<<"\t\t ---********------------------\n\t\t|\n";
-		cout<<"\t\t ---********------------------\n\t\t|\n";
-		cout<<"\t\t ---********------------------\n\t\t|\n";
-		cout<<"\t\t ---View___*------------------\n\t\t|  |\n";
-		cout<<"\t\t    -----Exact query__1-------\n\t\t|  |\n";
-		cout<<"\t\t    -----Fuzzy query__2-------\n\t\t|  |\n";
-		cout<<"\t\t    -----Category_____3-------\n\t\t|  |\n";
-		cout<<"\t\t    -----All__________4-------\n\t\t|  |\n";
-		cout<<"\t\t    -----Back_________5-------\n\t\t|   \n";
-
-		cout<<"\t\t ---********------------------\n\n";
+		readFile(".\\io\\ViewMenu.io");
 
 		if (fuckin_stupid != 0)
 			cout<<"\t\tError Inputing!\n";

@@ -22,8 +22,7 @@ private:
 	ViewStrategy*	setViewStrategy(int);
 	void				  removeViewStrategy(void*);
 public:
-	MainVewMenu();
-	virtual ~MainVewMenu();
+	virtual ~MainVewMenu(){};
 };
 
 #endif // !defined(AFX_MAINVEWMENU_H__30EDC353_618B_4196_A8BB_4A59557068CD__INCLUDED_)

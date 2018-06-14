@@ -11,8 +11,9 @@
 
 #include "MainStrategy.h"
 #include "ViewStrategy.h"
+#include "PrtMenuInterface.h"
 
-class MainVewMenuInterface : public MainStrategy
+class MainVewMenuInterface : public MainStrategy, public PrtMenuInterface
 {
 private:
 	ViewStrategy* viewStrategy;

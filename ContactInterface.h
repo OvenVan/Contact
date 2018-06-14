@@ -11,8 +11,9 @@
 
 #include "MainStrategy.h"
 #include "CheckInterface.h"
+#include "PrtMenuInterface.h"
 
-class ContactInterface : public CheckInterface
+class ContactInterface : public PrtMenuInterface
 {
 private:
 	MainStrategy* mainStrategy;

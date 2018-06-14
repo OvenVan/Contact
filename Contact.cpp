@@ -109,3 +109,4 @@ int Contact::refresh() const{
 	}
 	return contact_item.size();
 }
+

@@ -6,7 +6,7 @@
 --------------------Configuration: contacts - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP126C.tmp" with contents
+Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP72B1.tmp" with contents
 [
 /nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/contacts.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
 "F:\大学\c++Projects\Contacts\CheckInterface.cpp"
@@ -20,20 +20,21 @@ Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP126C.tmp" with cont
 "F:\大学\c++Projects\Contacts\MainVewMenu.cpp"
 "F:\大学\c++Projects\Contacts\MainVewMenuInterface.cpp"
 "F:\大学\c++Projects\Contacts\Person.cpp"
+"F:\大学\c++Projects\Contacts\PrtMenuInterface.cpp"
 "F:\大学\c++Projects\Contacts\ViewAllMenu.cpp"
 "F:\大学\c++Projects\Contacts\ViewCategoryMenu.cpp"
 "F:\大学\c++Projects\Contacts\ViewExactMenu.cpp"
 "F:\大学\c++Projects\Contacts\ViewFuzzyMenu.cpp"
 "F:\大学\c++Projects\Contacts\ViewStrategy.cpp"
 ]
-Creating command line "cl.exe @C:\Users\dell\AppData\Local\Temp\RSP126C.tmp" 
-Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP126D.tmp" with contents
+Creating command line "cl.exe @C:\Users\dell\AppData\Local\Temp\RSP72B1.tmp" 
+Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP72B2.tmp" with contents
 [
 /nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/contacts.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
 "F:\大学\c++Projects\Contacts\StdAfx.cpp"
 ]
-Creating command line "cl.exe @C:\Users\dell\AppData\Local\Temp\RSP126D.tmp" 
-Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP126E.tmp" with contents
+Creating command line "cl.exe @C:\Users\dell\AppData\Local\Temp\RSP72B2.tmp" 
+Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP72B3.tmp" with contents
 [
 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/contacts.pdb" /debug /machine:I386 /out:"Debug/contacts.exe" /pdbtype:sept 
 ".\Debug\CheckInterface.obj"
@@ -47,6 +48,7 @@ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32
 ".\Debug\MainVewMenu.obj"
 ".\Debug\MainVewMenuInterface.obj"
 ".\Debug\Person.obj"
+".\Debug\PrtMenuInterface.obj"
 ".\Debug\StdAfx.obj"
 ".\Debug\ViewAllMenu.obj"
 ".\Debug\ViewCategoryMenu.obj"
@@ -54,11 +56,13 @@ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32
 ".\Debug\ViewFuzzyMenu.obj"
 ".\Debug\ViewStrategy.obj"
 ]
-Creating command line "link.exe @C:\Users\dell\AppData\Local\Temp\RSP126E.tmp"
+Creating command line "link.exe @C:\Users\dell\AppData\Local\Temp\RSP72B3.tmp"
 <h3>Output Window</h3>
 Compiling...
+Skipping... (no relevant changes detected)
 StdAfx.cpp
 Compiling...
+Skipping... (no relevant changes detected)
 CheckInterface.cpp
 Contact.cpp
 ContactInterface.cpp
@@ -70,14 +74,14 @@ MainStrategy.cpp
 MainVewMenu.cpp
 MainVewMenuInterface.cpp
 Person.cpp
+PrtMenuInterface.cpp
 ViewAllMenu.cpp
 ViewCategoryMenu.cpp
 ViewExactMenu.cpp
 ViewFuzzyMenu.cpp
 ViewStrategy.cpp
-Generating Code...
 Linking...
-Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP1CDE.tmp" with contents
+Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP7516.tmp" with contents
 [
 /nologo /o"Debug/contacts.bsc" 
 ".\Debug\StdAfx.sbr"
@@ -92,12 +96,13 @@ Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP1CDE.tmp" with cont
 ".\Debug\MainVewMenu.sbr"
 ".\Debug\MainVewMenuInterface.sbr"
 ".\Debug\Person.sbr"
+".\Debug\PrtMenuInterface.sbr"
 ".\Debug\ViewAllMenu.sbr"
 ".\Debug\ViewCategoryMenu.sbr"
 ".\Debug\ViewExactMenu.sbr"
 ".\Debug\ViewFuzzyMenu.sbr"
 ".\Debug\ViewStrategy.sbr"]
-Creating command line "bscmake.exe @C:\Users\dell\AppData\Local\Temp\RSP1CDE.tmp"
+Creating command line "bscmake.exe @C:\Users\dell\AppData\Local\Temp\RSP7516.tmp"
 Creating browse info file...
 <h3>Output Window</h3>
 
