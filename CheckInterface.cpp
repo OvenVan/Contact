@@ -7,12 +7,17 @@
 
 
 bool CheckInterface::check(Person& person, const bool _check_repe) const {	
-	int i = 0, j = 0;
-	string re_write = "";
+	int i = 0, j = 0;						//common loop variable
+	string re_write = "";				//rewrite tel and qq(if valid) into good format
+	vector<string> temp_str;
+	bool mailFlag = false;			 //check mailbox's format
+//===============================
+
 	if (!((strlen(person.name)>0) && (strlen(person.tel)>0) && (strlen(person.addr)>0)) ){
 		errorMsg = "Name/Tel/Address is null.";
 		return false;
-	}
+	}	
+//===============================
 
 	if (_check_repe){				//here to use _check_repe only once.
 		for (i = 0; i < contact_item.size(); i++)
@@ -21,7 +26,8 @@ bool CheckInterface::check(Person& person, const bool _check_repe) const {
 				errorMsg = "Item already exists.";
 				return false;
 			}
-	}
+	}	
+//===============================
 
 	for (i = 0; i<strlen(person.tel); i++){
 		if (!(( (person.tel[i]>='0')&&(person.tel[i]<='9') ) || (person.tel[i] == ','))){
@@ -29,9 +35,7 @@ bool CheckInterface::check(Person& person, const bool _check_repe) const {
 			return false;
 		}
 	}
-
-	vector<string> temp_str = this->part_tq(person, "tel");
-
+	temp_str = this->part_tq(person, "tel");
 	re_write = "";
 	for (i = 0; i<temp_str.size(); i++){
 		for (j = i + 1; j<temp_str.size();j++){
@@ -46,7 +50,8 @@ bool CheckInterface::check(Person& person, const bool _check_repe) const {
 		}
 	}
 	re_write = re_write.substr(0,re_write.length()-1);
-	strcpy(person.tel,re_write.c_str());
+	strcpy(person.tel,re_write.c_str());	
+//===============================
 	
 	if (person.sex != '\0'){
 		if ((person.sex == 'f') || (person.sex == 'm'))
@@ -55,7 +60,26 @@ bool CheckInterface::check(Person& person, const bool _check_repe) const {
 			errorMsg = "Unknown character in Gender option.";
 			return false;
 		}
-	}
+	}	
+//===============================
+
+	if (strcmp(person.mail,"") != 0){
+		mailFlag = false;
+		for (i = 0; i<strlen(person.mail); ++i){
+			if (person.mail[i] == '@'){
+				if (mailFlag){
+					errorMsg = "Format of Mailbox fill is incorrect.";
+					return false;
+				}
+				(!mailFlag) && (mailFlag = true);
+			}
+		}//for
+		if (!mailFlag){
+			errorMsg = "Format of Mailbox fill is incorrect.";
+			return false;
+		}
+	}	
+//===============================
 	
 	if (strcmp(person.qq, "") != 0){
 		re_write = "";
@@ -81,7 +105,9 @@ bool CheckInterface::check(Person& person, const bool _check_repe) const {
 		re_write = re_write.substr(0,re_write.length()-1);
 		strcpy(person.qq,re_write.c_str());
 	}	
-	return true;
+	return true;	
+//===============================
+	//...
 }
 
 bool CheckInterface::check_exact(const Person& index, const string info_str) const{

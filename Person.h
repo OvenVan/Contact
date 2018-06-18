@@ -9,7 +9,7 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-#define MAXNAME	100
+#define MAXNAME	 100
 #define MAXTEL	80
 #define	MAXADDR	100
 #define MAXZIP	10
@@ -22,7 +22,6 @@ class Person
 public:
 	Person();
 	~Person();
-	//why procted does not work?
 	char name[MAXNAME];
 	char sex;
 	char tel[MAXTEL];
