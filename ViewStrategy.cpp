@@ -5,17 +5,6 @@
 #include "stdafx.h"
 #include "ViewStrategy.h"
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
-
-ViewStrategy::~ViewStrategy()
-{
-
-}
-
-
 string ViewStrategy::title_vew(const char* title, const char* descp) const{
 	string info_str;
 	Person* viewPerson = NULL;
@@ -39,6 +28,9 @@ Person* ViewStrategy::anythingView(vector<int>& chosen_item) const{
 
 	if (chosen_item.size() == 0){
 		cout<<"\n\n\t\tNo Item Found!\n";
+		cin.clear();
+		cin.sync();
+		getch();
 		return NULL;
 	}
 	else {

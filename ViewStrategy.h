@@ -19,7 +19,7 @@ protected:
 	string category_vew() const;
 	Person* anythingView(vector<int>&) const;
 public:
-	virtual ~ViewStrategy();
+	virtual ~ViewStrategy(){};
 	virtual Person* doViewStrategy() = 0;
 };
 
