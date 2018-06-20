@@ -41,6 +41,7 @@ void Contact::removeMainStrategy(void* p){
 
 void Contact::welcome() const{
 	int n = 0;
+	system("cls");
 	cout<<"\n\n\n----------Welcome to the Address Book System.--------\n\n";
 	cout<<"-----now LOADING address book...";
 	n = refresh();

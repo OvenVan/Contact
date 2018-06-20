@@ -16,7 +16,7 @@ string ViewStrategy::title_vew(const char* title, const char* descp) const{
 	cin.clear();
 	cin.sync();
 	cin>>info_str;
-
+	cout<<endl;
 	return info_str;
 
 }
@@ -27,7 +27,7 @@ Person* ViewStrategy::anythingView(vector<int>& chosen_item) const{
 	int index = 0;
 
 	if (chosen_item.size() == 0){
-		cout<<"\n\n\t\tNo Item Found!\n";
+		cout<<"\n\t\tNo Item Found!\n";
 		cin.clear();
 		cin.sync();
 		getch();
@@ -98,5 +98,6 @@ string ViewStrategy::category_vew() const{
 	if ((info_str == "Unset") || (info_str == "unset"))
 		info_str = "";
 
+	cout<<endl;
 	return info_str;
 }

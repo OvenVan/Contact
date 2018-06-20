@@ -21,6 +21,9 @@ MainDelMenu::doMainStrategy()
 		cin>>index;
 		if ((index<0) || (index>num)){
 			cout<<"\n\n\t\tError Input!\n";
+			cin.clear();
+			cin.sync();
+			getch();
 			index = 0;
 		}
 	}
