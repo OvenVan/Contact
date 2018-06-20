@@ -92,6 +92,7 @@ bool MainNewMenu::create() const{
 		return false;
 	}
 
+//--------------------------------------------------------
 	char _char[30] = "";
 	char* t_addr = _char;
 	sprintf(t_addr,".\\contact\\%s.ctt",t_info.name);
@@ -101,6 +102,6 @@ bool MainNewMenu::create() const{
 	if(fwrite(&t_info, sizeof(t_info), 1, fp) != 1)
 		printf("err");
 	fclose(fp);
-	
+//--------------------------------------------------------	
 	return true;
 }
