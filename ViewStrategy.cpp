@@ -7,7 +7,6 @@
 
 string ViewStrategy::title_vew(const char* title, const char* descp) const{
 	string info_str;
-	Person* viewPerson = NULL;
 
 	system("cls");
 	cout<<endl;
@@ -24,7 +23,7 @@ string ViewStrategy::title_vew(const char* title, const char* descp) const{
 
 
 Person* ViewStrategy::anythingView(vector<int>& chosen_item) const{
-	int index = 0;
+	unsigned index = 0;
 
 	if (chosen_item.size() == 0){
 		cout<<"\n\t\tNo Item Found!\n";
@@ -43,7 +42,7 @@ Person* ViewStrategy::anythingView(vector<int>& chosen_item) const{
 			cin.clear();
 			cin.sync();
 			cin>>index;
-			if ((index<0) || (index>chosen_item.size())){
+			if (index>chosen_item.size()){
 				return NULL;
 			}
 		}//if (chosen_item.size() == 1)
@@ -55,9 +54,6 @@ Person* ViewStrategy::anythingView(vector<int>& chosen_item) const{
 }
 
 void ViewStrategy::all_vew() const{
-	int i = 0,j = 0;	
-	Person* viewPerson = NULL;
-
 	system("cls");
 	cout<<endl;
 	cout<<"=====ALL Category======================\n\n";
@@ -69,8 +65,7 @@ string ViewStrategy::category_vew() const{
 	vector<string> cur_ctg;
 	string tmp_ctg;
 	bool add_ctg;
-	int index = 0;
-	int i = 0,j = 0;
+	unsigned i = 0,j = 0;
 
 	system("cls");
 	cout<<endl;

@@ -8,7 +8,6 @@
 Person* ViewCategoryMenu::doViewStrategy(){
 	string info_str = ViewStrategy::category_vew();
 	int num = contact_item.size();
-	int index = 0;
 	vector<int> chosen_item;
 
 	for (int i = 0; i < num; i++){

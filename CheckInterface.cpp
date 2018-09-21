@@ -7,7 +7,7 @@
 
 
 bool CheckInterface::check(Person& person, const bool _check_repe) const {	
-	int i = 0, j = 0;						//common loop variable
+	unsigned i = 0, j = 0;						//common loop variable
 	string re_write = "";				//rewrite tel and qq(if valid) into good format
 	vector<string> temp_str;
 	bool mailFlag = false;			 //check mailbox's format
@@ -22,7 +22,6 @@ bool CheckInterface::check(Person& person, const bool _check_repe) const {
 	if (_check_repe){				//here to use _check_repe only once.
 		for (i = 0; i < contact_item.size(); i++)
 			if (strcmp(person.name,&*contact_item[i]->name) == 0){
-				sizeof(*contact_item[i]);
 				errorMsg = "Item already exists.";
 				return false;
 			}
@@ -114,7 +113,7 @@ bool CheckInterface::check_exact(const Person& index, const string info_str) con
 	if (strcmp(index.name,info_str.c_str()) == 0)
 		return true;
 	vector<string> temp_vec = part_tq(index, "tel");
-	for (int i = 0; i<temp_vec.size(); i++){
+	for (unsigned i = 0; i<temp_vec.size(); i++){
 		if (strcmp(temp_vec.at(i).c_str(),info_str.c_str()) == 0)
 			return true;
 	}
@@ -132,7 +131,7 @@ vector<string> CheckInterface::part_tq(const Person& person, const char* const T
 	else
 		return rtn_vec;
 
-	for (int i = 0; i<strlen(src_str.c_str()); i++){
+	for (unsigned i = 0; i<strlen(src_str.c_str()); i++){
 		if (src_str[i] == ','){
 			rtn_vec.push_back(temp_str);
 			temp_str = "";

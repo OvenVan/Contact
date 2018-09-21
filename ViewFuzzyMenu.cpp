@@ -8,7 +8,6 @@
 Person* ViewFuzzyMenu::doViewStrategy(){
 	string info_str = ViewStrategy::title_vew("=====Fuzzy Query Contact===============", "\tEnter infomation that needs to be querying: ");
 	int num = contact_item.size();
-	int index = 0;
 	vector<int> chosen_item;
 
 	for (int i = 0; i < num; i++){

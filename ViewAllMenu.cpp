@@ -7,7 +7,6 @@
 
 Person* ViewAllMenu::doViewStrategy(){
 	int num = contact_item.size();
-	int index = 0;
 	vector<int> chosen_item;
 
 	ViewStrategy::all_vew();

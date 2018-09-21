@@ -80,7 +80,7 @@ bool MainStrategy::modify_prsn(Person& m_Person) const{
 		while((t_c = getchar()) != '\n')
 			{t_str += t_c;}
 		if (t_str[0] == '+'){
-			t_str.erase(&t_str[0]);
+			t_str = t_str.substr(1, t_str.length());
 			string _t_str = t_info.tel;
 			_t_str += ",";
 			_t_str += t_str;
@@ -131,7 +131,7 @@ bool MainStrategy::modify_prsn(Person& m_Person) const{
 		while((t_c = getchar()) != '\n')
 			{t_str += t_c;}
 		if (t_str[0] == '+'){
-			t_str.erase(&t_str[0]);
+			t_str = t_str.substr(1, t_str.length());
 			string _t_str = t_info.qq;
 			_t_str += ",";
 			_t_str += t_str;
