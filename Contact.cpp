@@ -35,7 +35,7 @@ MainStrategy* Contact::setMainStrategy(int num){
 		return NULL;
 }
 
-void Contact::removeMainStrategy(void* p){
+void Contact::removeMainStrategy(MainStrategy* p){
 	delete p;
 }
 

@@ -26,7 +26,7 @@ ViewStrategy* MainVewMenu::setViewStrategy(int slct_num){
 	return NULL;
 }
 
-void MainVewMenu::removeViewStrategy(void* p){
+void MainVewMenu::removeViewStrategy(ViewStrategy* p){
 	delete p;
 }
 

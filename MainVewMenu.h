@@ -20,7 +20,7 @@ class MainVewMenu : public MainVewMenuInterface
 {
 private:
 	ViewStrategy*	setViewStrategy(int);
-	void				  removeViewStrategy(void*);
+	void				  removeViewStrategy(ViewStrategy*);
 public:
 	MainVewMenu();
 	virtual ~MainVewMenu(){};

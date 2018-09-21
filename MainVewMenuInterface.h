@@ -20,7 +20,7 @@ private:
 
 	virtual int view(Person* v_Person) const;								//View a Person member with details
 	virtual ViewStrategy* setViewStrategy(int) = 0;
-	virtual void removeViewStrategy(void*) = 0;
+	virtual void removeViewStrategy(ViewStrategy*) = 0;
 protected:
 	int ViewFunctionsNum;
 public:

@@ -18,7 +18,7 @@ class ContactInterface : public PrtMenuInterface
 private:
 	MainStrategy* mainStrategy;
 	virtual MainStrategy* setMainStrategy(int) = 0;
-	virtual void removeMainStrategy(void*) = 0;
+	virtual void removeMainStrategy(MainStrategy*) = 0;
 protected:
 	int MainFunctionsNum;
 public:
